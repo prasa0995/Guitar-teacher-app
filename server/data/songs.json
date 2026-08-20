@@ -8,40 +8,103 @@
     "timeSignature": "3/4",
     "capo": 0,
     "bpmOriginal": 76,
-    "bpmLevels": [50, 60, 70, 76],
-    "requiredChordIds": ["G", "C", "D", "Em"],
-    "requiredTechniqueIds": ["down-strum", "up-strum"],
+    "bpmLevels": [
+      50,
+      60,
+      70,
+      76
+    ],
+    "requiredChordIds": [
+      "G",
+      "C",
+      "D",
+      "Em"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum"
+    ],
     "strummingComplexity": "simple",
     "fingerpickingRequired": false,
     "barreChordRequired": false,
     "lyricsSource": "public_domain",
     "sections": [
       {
-        "id": "verse-1", "label": "Verse 1",
-        "chordProgression": ["G", "G", "G", "C", "G", "G", "Em", "D", "G", "G"],
+        "id": "verse-1",
+        "label": "Verse 1",
+        "chordProgression": [
+          "G",
+          "G",
+          "G",
+          "C",
+          "G",
+          "G",
+          "Em",
+          "D",
+          "G",
+          "G"
+        ],
         "strummingPattern": "D . . D . . D . U D . .",
         "beatsPerChord": 3,
         "lyrics": "Amazing grace, how sweet the sound, that saved a wretch like me."
       },
       {
-        "id": "verse-2", "label": "Verse 2",
-        "chordProgression": ["G", "G", "G", "C", "G", "G", "Em", "D", "G", "G"],
+        "id": "verse-2",
+        "label": "Verse 2",
+        "chordProgression": [
+          "G",
+          "G",
+          "G",
+          "C",
+          "G",
+          "G",
+          "Em",
+          "D",
+          "G",
+          "G"
+        ],
         "strummingPattern": "D . . D . . D . U D . .",
         "beatsPerChord": 3,
         "lyrics": "I once was lost, but now am found, was blind but now I see."
       },
       {
-        "id": "verse-3", "label": "Verse 3",
-        "chordProgression": ["G", "C", "G", "Em", "D", "G"],
+        "id": "verse-3",
+        "label": "Verse 3",
+        "chordProgression": [
+          "G",
+          "C",
+          "G",
+          "Em",
+          "D",
+          "G"
+        ],
         "strummingPattern": "D . . D . . D . U D . .",
         "beatsPerChord": 3,
         "lyrics": "'Twas grace that taught my heart to fear, and grace my fears relieved."
       }
     ],
     "practiceLoops": [
-      { "label": "G to C transition", "chords": ["G", "C"], "recommendedBpm": 50 },
-      { "label": "Em to D transition", "chords": ["Em", "D"], "recommendedBpm": 50 },
-      { "label": "Full verse", "sectionId": "verse-1", "recommendedBpm": 60 }
+      {
+        "label": "G to C transition",
+        "chords": [
+          "G",
+          "C"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "Em to D transition",
+        "chords": [
+          "Em",
+          "D"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse-1",
+        "recommendedBpm": 60
+      }
     ],
     "beginnerVersion": "Use the 3-finger G shape and drop the D-string bass note walk; just strum straight downstrokes on beat 1 of each measure instead of the full pattern."
   },
@@ -54,43 +117,104 @@
     "timeSignature": "4/4",
     "capo": 0,
     "bpmOriginal": 90,
-    "bpmLevels": [50, 60, 70, 80, 90],
-    "requiredChordIds": ["Am", "C", "G", "Em"],
-    "requiredTechniqueIds": ["down-strum", "up-strum", "alternate-strum"],
+    "bpmLevels": [
+      50,
+      60,
+      70,
+      80,
+      90
+    ],
+    "requiredChordIds": [
+      "Am",
+      "C",
+      "G",
+      "Em"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "alternate-strum"
+    ],
     "strummingComplexity": "moderate",
     "fingerpickingRequired": false,
     "barreChordRequired": false,
     "lyricsSource": "original",
     "sections": [
       {
-        "id": "intro", "label": "Intro",
-        "chordProgression": ["Am", "C", "G", "Em"],
-        "strummingPattern": "D D U U D U", "beatsPerChord": 4,
+        "id": "intro",
+        "label": "Intro",
+        "chordProgression": [
+          "Am",
+          "C",
+          "G",
+          "Em"
+        ],
+        "strummingPattern": "D D U U D U",
+        "beatsPerChord": 4,
         "lyrics": null
       },
       {
-        "id": "verse-1", "label": "Verse 1",
-        "chordProgression": ["Am", "C", "G", "Em", "Am", "C", "G", "G"],
-        "strummingPattern": "D D U U D U", "beatsPerChord": 4,
+        "id": "verse-1",
+        "label": "Verse 1",
+        "chordProgression": [
+          "Am",
+          "C",
+          "G",
+          "Em",
+          "Am",
+          "C",
+          "G",
+          "G"
+        ],
+        "strummingPattern": "D D U U D U",
+        "beatsPerChord": 4,
         "lyrics": "Down by the riverbend, where the water runs slow, I found a quiet place to let it go."
       },
       {
-        "id": "chorus", "label": "Chorus",
-        "chordProgression": ["C", "G", "Am", "Em"],
-        "strummingPattern": "D DU UDU", "beatsPerChord": 4,
+        "id": "chorus",
+        "label": "Chorus",
+        "chordProgression": [
+          "C",
+          "G",
+          "Am",
+          "Em"
+        ],
+        "strummingPattern": "D DU UDU",
+        "beatsPerChord": 4,
         "lyrics": "So carry me, carry me home, carry me where the wild things roam."
       },
       {
-        "id": "outro", "label": "Outro",
-        "chordProgression": ["Am", "G", "Am"],
-        "strummingPattern": "D . . . D . . .", "beatsPerChord": 4,
+        "id": "outro",
+        "label": "Outro",
+        "chordProgression": [
+          "Am",
+          "G",
+          "Am"
+        ],
+        "strummingPattern": "D . . . D . . .",
+        "beatsPerChord": 4,
         "lyrics": null
       }
     ],
     "practiceLoops": [
-      { "label": "Am to C transition", "chords": ["Am", "C"], "recommendedBpm": 50 },
-      { "label": "Chorus pattern only", "sectionId": "chorus", "recommendedBpm": 60 },
-      { "label": "Full verse", "sectionId": "verse-1", "recommendedBpm": 70 }
+      {
+        "label": "Am to C transition",
+        "chords": [
+          "Am",
+          "C"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "Chorus pattern only",
+        "sectionId": "chorus",
+        "recommendedBpm": 60
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse-1",
+        "recommendedBpm": 70
+      }
     ],
     "beginnerVersion": "Replace the chorus's syncopated 'D DU UDU' with plain quarter-note downstrokes until the chord changes feel automatic."
   },
@@ -103,24 +227,1064 @@
     "timeSignature": "4/4",
     "capo": 0,
     "bpmOriginal": 100,
-    "bpmLevels": [55, 65, 80, 100],
-    "requiredChordIds": ["F", "C", "G", "Am"],
-    "requiredTechniqueIds": ["down-strum", "up-strum", "barre-chords", "palm-muting"],
+    "bpmLevels": [
+      55,
+      65,
+      80,
+      100
+    ],
+    "requiredChordIds": [
+      "F",
+      "C",
+      "G",
+      "Am"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "barre-chords",
+      "palm-muting"
+    ],
     "strummingComplexity": "moderate",
     "fingerpickingRequired": false,
     "barreChordRequired": true,
     "lyricsSource": "none",
-    "lyricsNote": "This is an instructional placeholder song for practicing barre chords — no lyrics are included. To sing along to a real copyrighted song, add your own licensed lyric text in Song Progress, or look it up from a source you have rights to use.",
+    "lyricsNote": "This is an instructional placeholder song for practicing barre chords \u2014 no lyrics are included. To sing along to a real copyrighted song, add your own licensed lyric text in Song Progress, or look it up from a source you have rights to use.",
     "sections": [
-      { "id": "verse-1", "label": "Verse", "chordProgression": ["F", "C", "G", "Am"], "strummingPattern": "D D U D U", "beatsPerChord": 4, "lyrics": null },
-      { "id": "chorus", "label": "Chorus", "chordProgression": ["C", "G", "F", "F"], "strummingPattern": "(palm mute) D D U D U", "beatsPerChord": 4, "lyrics": null },
-      { "id": "bridge", "label": "Bridge", "chordProgression": ["Am", "F", "C", "G"], "strummingPattern": "D . U . D U D U", "beatsPerChord": 4, "lyrics": null }
+      {
+        "id": "verse-1",
+        "label": "Verse",
+        "chordProgression": [
+          "F",
+          "C",
+          "G",
+          "Am"
+        ],
+        "strummingPattern": "D D U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus",
+        "chordProgression": [
+          "C",
+          "G",
+          "F",
+          "F"
+        ],
+        "strummingPattern": "(palm mute) D D U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "bridge",
+        "label": "Bridge",
+        "chordProgression": [
+          "Am",
+          "F",
+          "C",
+          "G"
+        ],
+        "strummingPattern": "D . U . D U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
     ],
     "practiceLoops": [
-      { "label": "F barre chord isolation", "chords": ["F"], "recommendedBpm": 55 },
-      { "label": "F to C transition", "chords": ["F", "C"], "recommendedBpm": 55 },
-      { "label": "Full verse", "sectionId": "verse-1", "recommendedBpm": 65 }
+      {
+        "label": "F barre chord isolation",
+        "chords": [
+          "F"
+        ],
+        "recommendedBpm": 55
+      },
+      {
+        "label": "F to C transition",
+        "chords": [
+          "F",
+          "C"
+        ],
+        "recommendedBpm": 55
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse-1",
+        "recommendedBpm": 65
+      }
     ],
     "beginnerVersion": "Use the simplified 4-string F shape until the full barre is comfortable, and skip the palm muting in the chorus at first."
+  },
+  {
+    "id": "knockin-heavens-door",
+    "title": "Knockin' on Heaven's Door",
+    "artist": "Bob Dylan",
+    "difficulty": "beginner",
+    "key": "G",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 72,
+    "bpmLevels": [
+      50,
+      58,
+      65,
+      72
+    ],
+    "requiredChordIds": [
+      "G",
+      "D",
+      "Am7",
+      "C"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "G",
+          "D",
+          "Am7",
+          "Am7"
+        ],
+        "strummingPattern": "D D U U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus",
+        "chordProgression": [
+          "G",
+          "D",
+          "C",
+          "C"
+        ],
+        "strummingPattern": "D D U U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "G to D transition",
+        "chords": [
+          "G",
+          "D"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "D to Am7 transition",
+        "chords": [
+          "D",
+          "Am7"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 58
+      }
+    ],
+    "beginnerVersion": "Use straight downstrokes on beats 1 and 3 until the G-D-Am7 change feels automatic."
+  },
+  {
+    "id": "horse-with-no-name",
+    "title": "A Horse with No Name",
+    "artist": "America",
+    "difficulty": "beginner",
+    "key": "Em",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 122,
+    "bpmLevels": [
+      70,
+      85,
+      100,
+      122
+    ],
+    "requiredChordIds": [
+      "Em",
+      "D"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "alternate-strum"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse (2-chord vamp)",
+        "chordProgression": [
+          "Em",
+          "D",
+          "Em",
+          "D"
+        ],
+        "strummingPattern": "D DU D DU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "Em to D transition",
+        "chords": [
+          "Em",
+          "D"
+        ],
+        "recommendedBpm": 70
+      },
+      {
+        "label": "Full vamp",
+        "sectionId": "verse",
+        "recommendedBpm": 85
+      }
+    ],
+    "beginnerVersion": "Only two chords the whole song \u2014 perfect for drilling one fast, clean transition. Start with plain downstrokes."
+  },
+  {
+    "id": "three-little-birds",
+    "title": "Three Little Birds",
+    "artist": "Bob Marley",
+    "difficulty": "beginner",
+    "key": "A",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 76,
+    "bpmLevels": [
+      50,
+      60,
+      68,
+      76
+    ],
+    "requiredChordIds": [
+      "A",
+      "D",
+      "E"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "palm-muting"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "A",
+          "D",
+          "A",
+          "E"
+        ],
+        "strummingPattern": ". U . U . U . U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus",
+        "chordProgression": [
+          "A",
+          "D",
+          "A",
+          "D",
+          "A",
+          "E"
+        ],
+        "strummingPattern": ". U . U . U . U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "Reggae upstroke skank",
+        "chords": [
+          "A"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "A to D transition",
+        "chords": [
+          "A",
+          "D"
+        ],
+        "recommendedBpm": 55
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 65
+      }
+    ],
+    "beginnerVersion": "Reggae skank uses only upstrokes, muted on the off-beats \u2014 start by just clapping the upstroke pattern before adding chords."
+  },
+  {
+    "id": "sweet-home-alabama",
+    "title": "Sweet Home Alabama",
+    "artist": "Lynyrd Skynyrd",
+    "difficulty": "intermediate",
+    "key": "D",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 98,
+    "bpmLevels": [
+      60,
+      72,
+      85,
+      98
+    ],
+    "requiredChordIds": [
+      "D",
+      "C",
+      "G"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "hammer-on"
+    ],
+    "strummingComplexity": "moderate",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "intro",
+        "label": "Intro riff (chords)",
+        "chordProgression": [
+          "D",
+          "C",
+          "G",
+          "G"
+        ],
+        "strummingPattern": "D D DU D D",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "D",
+          "C",
+          "G",
+          "D"
+        ],
+        "strummingPattern": "D D DU D D",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "D to C to G loop",
+        "chords": [
+          "D",
+          "C",
+          "G"
+        ],
+        "recommendedBpm": 60
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 72
+      }
+    ],
+    "beginnerVersion": "Skip the hammer-on decoration at first \u2014 plain D-C-G downstrokes capture the feel."
+  },
+  {
+    "id": "redemption-song",
+    "title": "Redemption Song",
+    "artist": "Bob Marley",
+    "difficulty": "beginner",
+    "key": "G",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 76,
+    "bpmLevels": [
+      50,
+      60,
+      68,
+      76
+    ],
+    "requiredChordIds": [
+      "G",
+      "Em",
+      "C",
+      "D"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "fingerpicking"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": true,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "G",
+          "Em",
+          "C",
+          "D"
+        ],
+        "strummingPattern": "D . D U D U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "G to Em transition",
+        "chords": [
+          "G",
+          "Em"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "Full verse (strummed version)",
+        "sectionId": "verse",
+        "recommendedBpm": 60
+      }
+    ],
+    "beginnerVersion": "Play it strummed instead of fingerpicked at first \u2014 the chord progression is the same either way."
+  },
+  {
+    "id": "ho-hey",
+    "title": "Ho Hey",
+    "artist": "The Lumineers",
+    "difficulty": "beginner",
+    "key": "C",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 76,
+    "bpmLevels": [
+      50,
+      60,
+      68,
+      76
+    ],
+    "requiredChordIds": [
+      "C",
+      "F",
+      "Am",
+      "G"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "palm-muting"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": true,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse (stomp-clap, muted)",
+        "chordProgression": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ],
+        "strummingPattern": "D . . . D . . .",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus",
+        "chordProgression": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ],
+        "strummingPattern": "D D U D DU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "F barre chord isolation",
+        "chords": [
+          "F"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "C to F to Am to G loop",
+        "chords": [
+          "C",
+          "F",
+          "Am",
+          "G"
+        ],
+        "recommendedBpm": 55
+      },
+      {
+        "label": "Full chorus",
+        "sectionId": "chorus",
+        "recommendedBpm": 65
+      }
+    ],
+    "beginnerVersion": "Use the simplified 4-string F shape, and just strum beat 1 of each measure for the verse."
+  },
+  {
+    "id": "im-yours",
+    "title": "I'm Yours",
+    "artist": "Jason Mraz",
+    "difficulty": "beginner",
+    "key": "G",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 130,
+    "bpmLevels": [
+      70,
+      90,
+      110,
+      130
+    ],
+    "requiredChordIds": [
+      "G",
+      "D",
+      "Em",
+      "C"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "alternate-strum"
+    ],
+    "strummingComplexity": "moderate",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "strummingPattern": "D DU UDU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus",
+        "chordProgression": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "strummingPattern": "D DU UDU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "G-D-Em-C loop slow",
+        "chords": [
+          "G",
+          "D",
+          "Em",
+          "C"
+        ],
+        "recommendedBpm": 70
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 90
+      }
+    ],
+    "beginnerVersion": "Start with plain downstrokes on each beat before adding the syncopated up-down-up pattern."
+  },
+  {
+    "id": "let-it-be",
+    "title": "Let It Be",
+    "artist": "The Beatles",
+    "difficulty": "beginner",
+    "key": "C",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 72,
+    "bpmLevels": [
+      50,
+      58,
+      65,
+      72
+    ],
+    "requiredChordIds": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": true,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "strummingPattern": "D . D U D U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus (Let it be)",
+        "chordProgression": [
+          "C",
+          "G",
+          "F",
+          "C"
+        ],
+        "strummingPattern": "D . D U D U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "F barre isolation",
+        "chords": [
+          "F"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "C-G-Am-F loop",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "recommendedBpm": 58
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 65
+      }
+    ],
+    "beginnerVersion": "Swap the barre F for the simplified 4-string F shape until your barre is solid."
+  },
+  {
+    "id": "no-woman-no-cry",
+    "title": "No Woman, No Cry",
+    "artist": "Bob Marley",
+    "difficulty": "beginner",
+    "key": "C",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 78,
+    "bpmLevels": [
+      50,
+      60,
+      68,
+      78
+    ],
+    "requiredChordIds": [
+      "C",
+      "G",
+      "Am",
+      "F"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": true,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "C",
+          "G",
+          "Am",
+          "F",
+          "C",
+          "G",
+          "F",
+          "C"
+        ],
+        "strummingPattern": "D DU D DU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "C-G-Am-F loop",
+        "chords": [
+          "C",
+          "G",
+          "Am",
+          "F"
+        ],
+        "recommendedBpm": 50
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 60
+      }
+    ],
+    "beginnerVersion": "Same 4-chord shape as many songs \u2014 great one to practice right after Let It Be."
+  },
+  {
+    "id": "zombie",
+    "title": "Zombie",
+    "artist": "The Cranberries",
+    "difficulty": "intermediate",
+    "key": "Em",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 84,
+    "bpmLevels": [
+      55,
+      65,
+      75,
+      84
+    ],
+    "requiredChordIds": [
+      "Em",
+      "C",
+      "G",
+      "D",
+      "E5",
+      "C5",
+      "G5",
+      "D5"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "palm-muting",
+      "barre-chords"
+    ],
+    "strummingComplexity": "moderate",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse (open chords)",
+        "chordProgression": [
+          "Em",
+          "C",
+          "G",
+          "D"
+        ],
+        "strummingPattern": "D D U U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus (power chords)",
+        "chordProgression": [
+          "E5",
+          "C5",
+          "G5",
+          "D5"
+        ],
+        "strummingPattern": "D D D D",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "Verse chord loop",
+        "chords": [
+          "Em",
+          "C",
+          "G",
+          "D"
+        ],
+        "recommendedBpm": 55
+      },
+      {
+        "label": "Power chord chorus",
+        "sectionId": "chorus",
+        "recommendedBpm": 65
+      }
+    ],
+    "beginnerVersion": "Play the whole song with the verse's open chords instead of switching to power chords for the chorus."
+  },
+  {
+    "id": "house-of-the-rising-sun",
+    "title": "House of the Rising Sun",
+    "artist": "Traditional / The Animals",
+    "difficulty": "intermediate",
+    "key": "Am",
+    "timeSignature": "6/8",
+    "capo": 0,
+    "bpmOriginal": 120,
+    "bpmLevels": [
+      60,
+      80,
+      100,
+      120
+    ],
+    "requiredChordIds": [
+      "Am",
+      "C",
+      "D",
+      "F",
+      "E"
+    ],
+    "requiredTechniqueIds": [
+      "fingerpicking"
+    ],
+    "strummingComplexity": "fingerpicked",
+    "fingerpickingRequired": true,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted-adjacent traditional song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse (fingerpicked)",
+        "chordProgression": [
+          "Am",
+          "C",
+          "D",
+          "F",
+          "Am",
+          "C",
+          "E",
+          "E"
+        ],
+        "strummingPattern": "(fingerpick, no strum pattern)",
+        "beatsPerChord": 6,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "Am to C fingerpicking",
+        "chords": [
+          "Am",
+          "C"
+        ],
+        "recommendedBpm": 60
+      },
+      {
+        "label": "Full progression slow",
+        "sectionId": "verse",
+        "recommendedBpm": 80
+      }
+    ],
+    "beginnerVersion": "Strum the progression with plain downstrokes before attempting the fingerpicked pattern."
+  },
+  {
+    "id": "chasing-cars",
+    "title": "Chasing Cars",
+    "artist": "Snow Patrol",
+    "difficulty": "beginner",
+    "key": "Em",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 104,
+    "bpmLevels": [
+      60,
+      75,
+      90,
+      104
+    ],
+    "requiredChordIds": [
+      "Em7",
+      "G",
+      "D",
+      "A"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum"
+    ],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse",
+        "chordProgression": [
+          "Em7",
+          "G",
+          "D",
+          "A"
+        ],
+        "strummingPattern": "D D U U D U",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "Em7-G-D-A loop",
+        "chords": [
+          "Em7",
+          "G",
+          "D",
+          "A"
+        ],
+        "recommendedBpm": 60
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 75
+      }
+    ],
+    "beginnerVersion": "Only 4 chords, no barre needed \u2014 a great early full-song target."
+  },
+  {
+    "id": "wonderwall",
+    "title": "Wonderwall",
+    "artist": "Oasis",
+    "difficulty": "intermediate",
+    "key": "Em",
+    "timeSignature": "4/4",
+    "capo": 2,
+    "bpmOriginal": 87,
+    "bpmLevels": [
+      55,
+      65,
+      75,
+      87
+    ],
+    "requiredChordIds": [
+      "Em7",
+      "G",
+      "Dsus4",
+      "A"
+    ],
+    "requiredTechniqueIds": [
+      "down-strum",
+      "up-strum",
+      "alternate-strum"
+    ],
+    "strummingComplexity": "moderate",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "none",
+    "lyricsNote": "Chords and rhythm only \u2014 this is a copyrighted song, so no lyrics are included.",
+    "sections": [
+      {
+        "id": "verse",
+        "label": "Verse (capo 2)",
+        "chordProgression": [
+          "Em7",
+          "G",
+          "Dsus4",
+          "A"
+        ],
+        "strummingPattern": "D DU UDU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "chorus",
+        "label": "Chorus (capo 2)",
+        "chordProgression": [
+          "C",
+          "D",
+          "Em7",
+          "G"
+        ],
+        "strummingPattern": "D DU UDU",
+        "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      {
+        "label": "Em7-G-Dsus4-A loop",
+        "chords": [
+          "Em7",
+          "G",
+          "Dsus4",
+          "A"
+        ],
+        "recommendedBpm": 55
+      },
+      {
+        "label": "Full verse",
+        "sectionId": "verse",
+        "recommendedBpm": 65
+      }
+    ],
+    "beginnerVersion": "Put a capo on fret 2 and use the same open-chord shapes as written \u2014 no barre chords required."
   }
 ]

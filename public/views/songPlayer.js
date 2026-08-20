@@ -1,6 +1,7 @@
 import { api, h } from '../app.js';
 import { Metronome } from '../components/metronome.js';
 import { setScreenContext } from '../components/aiChat.js';
+import { createRhythmLane } from '../components/rhythmLane.js';
 
 export function register(registerRoute) {
   registerRoute('song', render);
@@ -25,6 +26,22 @@ async function render(main, [id]) {
   };
 
   const met = new Metronome({ bpm: view.bpm, beatsPerMeasure: view.beatsPerMeasure, onBeat: onBeat });
+  let lane = null;
+  let laneCanvas = null;
+
+  function animateLane() {
+    // Self-terminates once this page's canvas is no longer in the DOM
+    // (e.g. the user navigated away), so no rAF loop leaks across pages.
+    if (!laneCanvas || !document.body.contains(laneCanvas)) return;
+    if (lane) {
+      lane.draw(met, () => ({
+        pattern: currentSection().strummingPattern,
+        beatsPerMeasure: view.beatsPerMeasure,
+      }));
+    }
+    requestAnimationFrame(animateLane);
+  }
+  requestAnimationFrame(animateLane);
 
   main.innerHTML = '';
   main.appendChild(h('a', { href: '#songs' }, '← Back to Songs'));
@@ -171,20 +188,13 @@ async function render(main, [id]) {
     stage.appendChild(dots);
 
     if (!view.hideChords) {
-      const secForStrum = view.loopOnly ? null : currentSection();
-      const pattern = secForStrum ? secForStrum.strummingPattern : null;
-      if (pattern) {
-        const tokens = pattern.replace(/\(.*?\)/g, '').trim().split(/\s+/).filter(Boolean);
-        const activeIdx = view.beatInCycle % tokens.length;
-        const seq = h('div', { class: 'strum-seq', style: 'justify-content:center;margin-top:12px;' });
-        tokens.forEach((t, i) => {
-          const arrow = t === 'D' ? '↓' : t === 'U' ? '↑' : '·';
-          seq.appendChild(h('div', { class: 'beat' + (i === activeIdx ? ' active' : '') }, [
-            h('div', { class: 'arrow' }, arrow), h('div', { class: 'num' }, String(i + 1)),
-          ]));
-        });
-        stage.appendChild(seq);
-      }
+      const canvas = h('canvas', { style: 'width:100%;height:90px;display:block;margin-top:14px;border-radius:10px;background:var(--bg-elev-2);' });
+      stage.appendChild(canvas);
+      lane = createRhythmLane(canvas);
+      laneCanvas = canvas;
+      stage.appendChild(h('p', { class: 'muted', style: 'font-size:11.5px;margin-top:6px;' }, 'Strums scroll toward the line — hit down/up when a block crosses it. Loops the current measure.'));
+    } else {
+      lane = null;
     }
 
     if (!view.hideLyrics && !view.strumOnly && !view.loopOnly && currentSection().lyrics) {

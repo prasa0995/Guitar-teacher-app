@@ -28,8 +28,17 @@ export class Metronome {
     if (this.running) return;
     this.running = true;
     this.currentBeat = 0;
-    this.nextNoteTime = this.audioCtx.currentTime + 0.05;
+    this.playStartTime = this.audioCtx.currentTime + 0.05;
+    this.nextNoteTime = this.playStartTime;
     this.scheduler();
+  }
+
+  // Precise elapsed time since start(), driven by the audio clock (not
+  // setInterval/Date.now, which drift) — used to drive smooth animation
+  // like the song player's scrolling rhythm lane.
+  elapsedSeconds() {
+    if (!this.running || !this.audioCtx) return 0;
+    return Math.max(0, this.audioCtx.currentTime - this.playStartTime);
   }
 
   stop() {
