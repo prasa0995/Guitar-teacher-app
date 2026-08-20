@@ -63,7 +63,7 @@ async function renderShell() {
 
   const [routeName] = currentRoute();
   const sidebar = h('div', { class: 'sidebar' }, [
-    h('div', { class: 'brand' }, ['🎸 AI Guitar ', h('span', {}, 'Teacher')]),
+    h('div', { class: 'brand' }, ['🎸 AI Guitar', h('span', {}, 'Sensei')]),
     ...NAV.map(([key, label, icon]) =>
       h('a', { href: `#${key}`, class: routeName === key ? 'active' : '' }, `${icon}  ${label}`)
     ),

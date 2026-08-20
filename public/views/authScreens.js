@@ -11,7 +11,7 @@ export function render(root, onAuthed) {
     wrap.innerHTML = '';
     wrap.appendChild(h('div', { class: 'auth-hero' }, [
       h('div', { class: 'glyph' }, '🎸'),
-      h('h1', {}, 'AI Guitar Teacher'),
+      h('h1', {}, 'AI GuitarSensei'),
       h('p', { class: 'muted' }, 'Your personal guitar teacher — chords, theory, songs, and practice, all guided by AI.'),
     ]));
     const card = h('div', { class: 'card', style: 'margin-top:18px;' });

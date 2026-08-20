@@ -17,7 +17,7 @@ export function mount() {
   const fab = h('button', { id: 'ai-fab', title: 'Ask your AI guitar teacher' }, '💬');
   const panel = h('div', { id: 'ai-panel' });
   const header = h('div', { class: 'ai-header' }, [
-    h('span', {}, '🎸 AI Guitar Teacher'),
+    h('span', {}, '🎸 AI GuitarSensei'),
     h('button', { class: 'ghost', style: 'padding:2px 8px;', onclick: () => panel.classList.remove('open') }, '✕'),
   ]);
   const messages = h('div', { id: 'ai-messages' });
