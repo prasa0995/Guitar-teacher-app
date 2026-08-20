@@ -22,7 +22,17 @@ function emptyState() {
   };
 }
 
-let state = load();
+// On Netlify, the deployed filesystem is read-only (only /tmp is writable and
+// doesn't survive between invocations), so persistence there goes through
+// Netlify Blobs instead — see hydrate()/flush() below, called once per
+// request by netlify/functions/api.js. Locally, the plain JSON file is used
+// exactly as before. Every route/service still just calls the same
+// synchronous store.* methods below either way — only load/save differ.
+function isNetlify() {
+  return !!process.env.NETLIFY || !!process.env.NETLIFY_DEV;
+}
+
+let state = isNetlify() ? emptyState() : load();
 
 function load() {
   try {
@@ -43,10 +53,46 @@ function load() {
 
 let saveTimer = null;
 function persist() {
+  if (isNetlify()) return; // flush() (Blobs) handles persistence there instead
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
     fs.writeFileSync(DATA_FILE, JSON.stringify(state, null, 2));
   }, 50);
+}
+
+let blobStore = null;
+async function getBlobStore() {
+  if (!blobStore) {
+    const { getStore } = require('@netlify/blobs');
+    blobStore = getStore('guitar-teacher-data');
+  }
+  return blobStore;
+}
+
+// Loads state from Netlify Blobs at the start of a function invocation.
+// No-op locally (the file was already loaded into `state` above).
+async function hydrate() {
+  if (!isNetlify()) return;
+  try {
+    const bs = await getBlobStore();
+    const raw = await bs.get('state', { type: 'json' });
+    state = raw ? Object.assign(emptyState(), raw) : emptyState();
+  } catch (err) {
+    console.error('Blob hydrate failed, starting fresh for this request:', err.message);
+    state = emptyState();
+  }
+}
+
+// Writes state back to Netlify Blobs at the end of a function invocation.
+// No-op locally (persist() already wrote the file on every change).
+async function flush() {
+  if (!isNetlify()) return;
+  try {
+    const bs = await getBlobStore();
+    await bs.setJSON('state', state);
+  } catch (err) {
+    console.error('Blob flush failed — changes from this request may be lost:', err.message);
+  }
 }
 
 function ensureUserBuckets(userId) {
@@ -229,4 +275,6 @@ module.exports = {
   },
 
   ensureUserBuckets,
+  hydrate,
+  flush,
 };

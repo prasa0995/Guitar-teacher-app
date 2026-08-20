@@ -5,7 +5,7 @@ const { newId, requireAuth, publicUser, bcrypt } = require('../auth');
 
 const router = express.Router();
 
-const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 30 });
+const authLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 30, keyGenerator: (req) => req.ip || 'unknown' });
 
 function validEmail(email) {
   return typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
