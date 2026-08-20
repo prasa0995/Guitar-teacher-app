@@ -1,0 +1,3573 @@
+[
+  {
+    "id": "Em",
+    "name": "E minor",
+    "family": "minor",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      2,
+      0,
+      0,
+      0
+    ],
+    "fingers": [
+      0,
+      2,
+      3,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "commonMistakes": [
+      "Pressing too hard causes finger fatigue fast",
+      "Letting the 1st finger touch the high E string and mute it"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [
+      {
+        "label": "1-2 fingers instead of 2-3",
+        "frets": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "fingers": [
+          0,
+          1,
+          2,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "relatedChordIds": [
+      "E",
+      "Em7",
+      "G"
+    ],
+    "songIds": [
+      "amazing-grace"
+    ],
+    "audioNote": "Low, dark, easy first chord — only 2 fingers needed."
+  },
+  {
+    "id": "Am",
+    "name": "A minor",
+    "family": "minor",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      0,
+      2,
+      2,
+      1,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      2,
+      3,
+      1,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      1,
+      5
+    ],
+    "commonMistakes": [
+      "Muting the high E string with the ring finger",
+      "Strumming the low E string (should stay open, not muted, but many beginners over-mute)"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "A",
+      "Am7",
+      "F"
+    ],
+    "songIds": [
+      "riptide-simple",
+      "wonderwall-progression"
+    ],
+    "audioNote": "One of the most common minor chords in beginner songs."
+  },
+  {
+    "id": "C",
+    "name": "C major",
+    "family": "major",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      3,
+      2,
+      0,
+      1,
+      0
+    ],
+    "fingers": [
+      0,
+      3,
+      2,
+      0,
+      1,
+      0
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [
+      3,
+      5
+    ],
+    "commonMistakes": [
+      "Strumming the low E string (must be muted/skipped)",
+      "Buzzing on the B string because the 1st finger isn't close enough to the fret"
+    ],
+    "beginnerVariant": {
+      "label": "2-finger C (drop the pinky-less version)",
+      "frets": [
+        null,
+        3,
+        2,
+        0,
+        1,
+        0
+      ]
+    },
+    "altFingerings": [],
+    "relatedChordIds": [
+      "Cadd9",
+      "Am",
+      "G"
+    ],
+    "songIds": [
+      "amazing-grace",
+      "riptide-simple"
+    ],
+    "audioNote": "Bright, common — the classic 'muted low string' beginner trap."
+  },
+  {
+    "id": "G",
+    "name": "G major",
+    "family": "major",
+    "difficulty": "beginner",
+    "frets": [
+      3,
+      2,
+      0,
+      0,
+      3,
+      3
+    ],
+    "fingers": [
+      2,
+      1,
+      0,
+      0,
+      3,
+      4
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      2,
+      3
+    ],
+    "commonMistakes": [
+      "Buzzing on the high strings from not enough finger arch",
+      "Slow transitions from G to C or D at first"
+    ],
+    "beginnerVariant": {
+      "label": "3-finger G (skip pinky, easier but less full)",
+      "frets": [
+        3,
+        2,
+        0,
+        0,
+        0,
+        3
+      ],
+      "fingers": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        3
+      ]
+    },
+    "altFingerings": [],
+    "relatedChordIds": [
+      "G7",
+      "Em",
+      "C",
+      "D"
+    ],
+    "songIds": [
+      "amazing-grace",
+      "wonderwall-progression"
+    ],
+    "audioNote": "Full, ringing chord — used in a huge share of beginner songs."
+  },
+  {
+    "id": "D",
+    "name": "D major",
+    "family": "major",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      null,
+      0,
+      2,
+      3,
+      2
+    ],
+    "fingers": [
+      0,
+      0,
+      0,
+      1,
+      3,
+      2
+    ],
+    "mutedStrings": [
+      0,
+      1
+    ],
+    "openStrings": [
+      2
+    ],
+    "commonMistakes": [
+      "Strumming the low E or A string by accident",
+      "Fingers overlapping and muting the high E string"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "Dm",
+      "D7",
+      "G"
+    ],
+    "songIds": [
+      "amazing-grace"
+    ],
+    "audioNote": "Small triangular shape near the top of the neck."
+  },
+  {
+    "id": "A",
+    "name": "A major",
+    "family": "major",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      0,
+      2,
+      2,
+      2,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [
+      1,
+      5
+    ],
+    "commonMistakes": [
+      "Three fingers crowded on one fret causing accidental muting",
+      "Strumming the low E string"
+    ],
+    "beginnerVariant": {
+      "label": "1-finger barre-across-fret-2 version",
+      "frets": [
+        null,
+        0,
+        2,
+        2,
+        2,
+        0
+      ]
+    },
+    "altFingerings": [],
+    "relatedChordIds": [
+      "Am",
+      "A7",
+      "D"
+    ],
+    "songIds": [
+      "riptide-simple"
+    ],
+    "audioNote": "Bright major chord, tricky finger crowding for beginners."
+  },
+  {
+    "id": "E",
+    "name": "E major",
+    "family": "major",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    "fingers": [
+      0,
+      2,
+      3,
+      1,
+      0,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      4,
+      5
+    ],
+    "commonMistakes": [
+      "Muting the G string with the 1st finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "Em",
+      "E7"
+    ],
+    "songIds": [],
+    "audioNote": "Big, full, all six strings ring."
+  },
+  {
+    "id": "F",
+    "name": "F major (barre)",
+    "family": "barre",
+    "difficulty": "intermediate",
+    "frets": [
+      1,
+      3,
+      3,
+      2,
+      1,
+      1
+    ],
+    "fingers": [
+      1,
+      3,
+      4,
+      2,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 5
+    },
+    "commonMistakes": [
+      "Not enough thumb-behind-neck pressure so strings buzz",
+      "Barre finger rolled flat instead of using the side of the finger"
+    ],
+    "beginnerVariant": {
+      "label": "Simplified F (just top 4 strings)",
+      "frets": [
+        null,
+        null,
+        3,
+        2,
+        1,
+        1
+      ]
+    },
+    "altFingerings": [],
+    "relatedChordIds": [
+      "C",
+      "Bb",
+      "F7"
+    ],
+    "songIds": [
+      "wonderwall-progression"
+    ],
+    "audioNote": "The classic first barre chord — needs hand strength, practice daily in short bursts."
+  },
+  {
+    "id": "G7",
+    "name": "G dominant 7th",
+    "family": "7th",
+    "difficulty": "beginner",
+    "frets": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      1
+    ],
+    "fingers": [
+      3,
+      2,
+      0,
+      0,
+      0,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      2,
+      3,
+      4
+    ],
+    "commonMistakes": [
+      "Confusing with G major"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "G",
+      "C"
+    ],
+    "songIds": [],
+    "audioNote": "Bluesy pull toward C — common turnaround chord."
+  },
+  {
+    "id": "Am7",
+    "name": "A minor 7th",
+    "family": "minor7",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      2,
+      0,
+      1,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      1,
+      3,
+      5
+    ],
+    "commonMistakes": [
+      "Easy chord — mainly a smoother substitute for Am"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "Am",
+      "C"
+    ],
+    "songIds": [],
+    "audioNote": "Mellow, jazzy, only 2 fingers."
+  },
+  {
+    "id": "Dsus2",
+    "name": "D suspended 2",
+    "family": "sus",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      null,
+      0,
+      2,
+      3,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      0,
+      1,
+      2,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      1
+    ],
+    "openStrings": [
+      2,
+      5
+    ],
+    "commonMistakes": [
+      "Forgetting to lift off the high E finger from the D chord shape"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "D",
+      "Dsus4"
+    ],
+    "songIds": [],
+    "audioNote": "Open, floaty sound — great strum-pattern color chord."
+  },
+  {
+    "id": "Cadd9",
+    "name": "C add 9",
+    "family": "add",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      3,
+      2,
+      0,
+      3,
+      0
+    ],
+    "fingers": [
+      0,
+      2,
+      1,
+      0,
+      3,
+      0
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [
+      3,
+      5
+    ],
+    "commonMistakes": [
+      "Stretch to the pinky on the high E string can feel awkward at first"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "C"
+    ],
+    "songIds": [],
+    "audioNote": "Sparkly, popular in acoustic pop songs as a C substitute."
+  },
+  {
+    "id": "E5",
+    "name": "E5 power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      2,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      3,
+      4,
+      5
+    ],
+    "openStrings": [
+      0
+    ],
+    "commonMistakes": [
+      "Letting the muted strings ring by accident"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "A5"
+    ],
+    "songIds": [],
+    "audioNote": "No major/minor quality — just root + fifth. Rock staple, moves easily up the neck."
+  },
+  {
+    "id": "Bb",
+    "name": "B-flat major (barre)",
+    "family": "barre",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      1,
+      3,
+      3,
+      3,
+      1
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 5
+    },
+    "commonMistakes": [
+      "Same barre-pressure issues as F, plus root on the A string is easy to miss"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [
+      "F",
+      "A"
+    ],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord — once F is comfortable, this is the same shape moved up."
+  },
+  {
+    "id": "Cm",
+    "name": "C minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      3,
+      5,
+      5,
+      4,
+      3
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C7",
+    "name": "C dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      3,
+      5,
+      3,
+      5,
+      3
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Cmaj7",
+    "name": "C major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      3,
+      5,
+      4,
+      5,
+      3
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Cm7",
+    "name": "C minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      3,
+      5,
+      3,
+      4,
+      3
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Csus4",
+    "name": "C suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      3,
+      5,
+      5,
+      6,
+      3
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C5",
+    "name": "C power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      3,
+      5,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 1,
+      "toString": 2
+    }
+  },
+  {
+    "id": "C#",
+    "name": "C# major",
+    "family": "major",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      4,
+      6,
+      6,
+      6,
+      4
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C#m",
+    "name": "C# minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      4,
+      6,
+      6,
+      5,
+      4
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C#7",
+    "name": "C# dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      4,
+      6,
+      4,
+      6,
+      4
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C#maj7",
+    "name": "C# major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      4,
+      6,
+      5,
+      6,
+      4
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C#m7",
+    "name": "C# minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      4,
+      6,
+      4,
+      5,
+      4
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C#sus4",
+    "name": "C# suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      4,
+      6,
+      6,
+      7,
+      4
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "C#5",
+    "name": "C# power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      4,
+      6,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 1,
+      "toString": 2
+    }
+  },
+  {
+    "id": "Dm",
+    "name": "D minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      5,
+      7,
+      7,
+      6,
+      5
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 5.",
+    "generated": true,
+    "barre": {
+      "fret": 5,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "D7",
+    "name": "D dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      5,
+      7,
+      5,
+      7,
+      5
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 5.",
+    "generated": true,
+    "barre": {
+      "fret": 5,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Dmaj7",
+    "name": "D major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      5,
+      7,
+      6,
+      7,
+      5
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 5.",
+    "generated": true,
+    "barre": {
+      "fret": 5,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Dm7",
+    "name": "D minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      5,
+      7,
+      5,
+      6,
+      5
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 5.",
+    "generated": true,
+    "barre": {
+      "fret": 5,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Dsus4",
+    "name": "D suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      5,
+      7,
+      7,
+      8,
+      5
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 5.",
+    "generated": true,
+    "barre": {
+      "fret": 5,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "D5",
+    "name": "D power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      5,
+      7,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 5.",
+    "generated": true,
+    "barre": {
+      "fret": 5,
+      "fromString": 1,
+      "toString": 2
+    }
+  },
+  {
+    "id": "Eb",
+    "name": "Eb major",
+    "family": "major",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      6,
+      8,
+      8,
+      8,
+      6
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Ebm",
+    "name": "Eb minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      6,
+      8,
+      8,
+      7,
+      6
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Eb7",
+    "name": "Eb dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      6,
+      8,
+      6,
+      8,
+      6
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Ebmaj7",
+    "name": "Eb major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      6,
+      8,
+      7,
+      8,
+      6
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Ebm7",
+    "name": "Eb minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      6,
+      8,
+      6,
+      7,
+      6
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Ebsus4",
+    "name": "Eb suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      6,
+      8,
+      8,
+      9,
+      6
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Eb5",
+    "name": "Eb power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      6,
+      8,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 6.",
+    "generated": true,
+    "barre": {
+      "fret": 6,
+      "fromString": 1,
+      "toString": 2
+    }
+  },
+  {
+    "id": "E7",
+    "name": "E dominant 7th",
+    "family": "7th",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      0,
+      1,
+      0,
+      0
+    ],
+    "fingers": [
+      0,
+      1,
+      0,
+      2,
+      0,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      2,
+      4,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Emaj7",
+    "name": "E major 7th",
+    "family": "major7",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      1,
+      1,
+      0,
+      0
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      4,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Em7",
+    "name": "E minor 7th",
+    "family": "minor7",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fingers": [
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Esus4",
+    "name": "E suspended 4th",
+    "family": "sus",
+    "difficulty": "beginner",
+    "frets": [
+      0,
+      2,
+      2,
+      2,
+      0,
+      0
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      0,
+      0
+    ],
+    "mutedStrings": [],
+    "openStrings": [
+      0,
+      4,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Fm",
+    "name": "F minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      1,
+      3,
+      3,
+      1,
+      1,
+      1
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F7",
+    "name": "F dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      1,
+      3,
+      1,
+      2,
+      1,
+      1
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Fmaj7",
+    "name": "F major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      1,
+      3,
+      2,
+      2,
+      1,
+      1
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Fm7",
+    "name": "F minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      1,
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Fsus4",
+    "name": "F suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      1,
+      3,
+      3,
+      3,
+      1,
+      1
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F5",
+    "name": "F power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      1,
+      3,
+      3,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 0,
+      "toString": 2
+    }
+  },
+  {
+    "id": "F#",
+    "name": "F# major",
+    "family": "major",
+    "difficulty": "intermediate",
+    "frets": [
+      2,
+      4,
+      4,
+      3,
+      2,
+      2
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F#m",
+    "name": "F# minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      2,
+      4,
+      4,
+      2,
+      2,
+      2
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F#7",
+    "name": "F# dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      2,
+      4,
+      2,
+      3,
+      2,
+      2
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F#maj7",
+    "name": "F# major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      2,
+      4,
+      3,
+      3,
+      2,
+      2
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F#m7",
+    "name": "F# minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      2,
+      4,
+      2,
+      2,
+      2,
+      2
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F#sus4",
+    "name": "F# suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      2,
+      4,
+      4,
+      4,
+      2,
+      2
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "F#5",
+    "name": "F# power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      2,
+      4,
+      4,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 0,
+      "toString": 2
+    }
+  },
+  {
+    "id": "Gm",
+    "name": "G minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      3,
+      5,
+      5,
+      3,
+      3,
+      3
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Gmaj7",
+    "name": "G major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      3,
+      5,
+      4,
+      4,
+      3,
+      3
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Gm7",
+    "name": "G minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      3,
+      5,
+      3,
+      3,
+      3,
+      3
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Gsus4",
+    "name": "G suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      3,
+      5,
+      5,
+      5,
+      3,
+      3
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "G5",
+    "name": "G power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      3,
+      5,
+      5,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 3.",
+    "generated": true,
+    "barre": {
+      "fret": 3,
+      "fromString": 0,
+      "toString": 2
+    }
+  },
+  {
+    "id": "Ab",
+    "name": "Ab major",
+    "family": "major",
+    "difficulty": "intermediate",
+    "frets": [
+      4,
+      6,
+      6,
+      5,
+      4,
+      4
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Abm",
+    "name": "Ab minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      4,
+      6,
+      6,
+      4,
+      4,
+      4
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Ab7",
+    "name": "Ab dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      4,
+      6,
+      4,
+      5,
+      4,
+      4
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      3,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Abmaj7",
+    "name": "Ab major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      4,
+      6,
+      5,
+      5,
+      4,
+      4
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Abm7",
+    "name": "Ab minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      4,
+      6,
+      4,
+      4,
+      4,
+      4
+    ],
+    "fingers": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Absus4",
+    "name": "Ab suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      4,
+      6,
+      6,
+      6,
+      4,
+      4
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      1
+    ],
+    "mutedStrings": [],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Ab5",
+    "name": "Ab power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      4,
+      6,
+      6,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      1,
+      2,
+      3,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable E-shape barre chord, barred at fret 4.",
+    "generated": true,
+    "barre": {
+      "fret": 4,
+      "fromString": 0,
+      "toString": 2
+    }
+  },
+  {
+    "id": "A7",
+    "name": "A dominant 7th",
+    "family": "7th",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      0,
+      2,
+      0,
+      2,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      1,
+      0,
+      2,
+      0
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [
+      1,
+      3,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Amaj7",
+    "name": "A major 7th",
+    "family": "major7",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      0,
+      2,
+      1,
+      2,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [
+      1,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Asus4",
+    "name": "A suspended 4th",
+    "family": "sus",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      0,
+      2,
+      2,
+      3,
+      0
+    ],
+    "fingers": [
+      0,
+      0,
+      1,
+      2,
+      3,
+      0
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [
+      1,
+      5
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "A5",
+    "name": "A power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      0,
+      2,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [
+      1
+    ],
+    "commonMistakes": [
+      "Letting a neighboring string get muted by an overlapping finger"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Open-position chord — no barre needed.",
+    "generated": true
+  },
+  {
+    "id": "Bbm",
+    "name": "Bb minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      1,
+      3,
+      3,
+      2,
+      1
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bb7",
+    "name": "Bb dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      1,
+      3,
+      1,
+      3,
+      1
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bbmaj7",
+    "name": "Bb major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      1,
+      3,
+      2,
+      3,
+      1
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bbm7",
+    "name": "Bb minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      1,
+      3,
+      1,
+      2,
+      1
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bbsus4",
+    "name": "Bb suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      1,
+      3,
+      3,
+      4,
+      1
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bb5",
+    "name": "Bb power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      1,
+      3,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 1.",
+    "generated": true,
+    "barre": {
+      "fret": 1,
+      "fromString": 1,
+      "toString": 2
+    }
+  },
+  {
+    "id": "B",
+    "name": "B major",
+    "family": "major",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      2,
+      4,
+      4,
+      4,
+      2
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bm",
+    "name": "B minor",
+    "family": "minor",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      2,
+      4,
+      4,
+      3,
+      2
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "B7",
+    "name": "B dominant 7th",
+    "family": "7th",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      2,
+      4,
+      2,
+      4,
+      2
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bmaj7",
+    "name": "B major 7th",
+    "family": "major7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      2,
+      4,
+      3,
+      4,
+      2
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bm7",
+    "name": "B minor 7th",
+    "family": "minor7",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      2,
+      4,
+      2,
+      3,
+      2
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "Bsus4",
+    "name": "B suspended 4th",
+    "family": "sus",
+    "difficulty": "intermediate",
+    "frets": [
+      null,
+      2,
+      4,
+      4,
+      5,
+      2
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      1
+    ],
+    "mutedStrings": [
+      0
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 5
+    }
+  },
+  {
+    "id": "B5",
+    "name": "B power chord",
+    "family": "power",
+    "difficulty": "beginner",
+    "frets": [
+      null,
+      2,
+      4,
+      null,
+      null,
+      null
+    ],
+    "fingers": [
+      0,
+      1,
+      2,
+      0,
+      0,
+      0
+    ],
+    "mutedStrings": [
+      0,
+      3,
+      4,
+      5
+    ],
+    "openStrings": [],
+    "commonMistakes": [
+      "Barre finger not pressing evenly across every string — roll toward the side of the finger, not flat",
+      "Not enough thumb-behind-neck support, causing buzz"
+    ],
+    "beginnerVariant": null,
+    "altFingerings": [],
+    "relatedChordIds": [],
+    "songIds": [],
+    "audioNote": "Movable A-shape barre chord, barred at fret 2.",
+    "generated": true,
+    "barre": {
+      "fret": 2,
+      "fromString": 1,
+      "toString": 2
+    }
+  }
+]

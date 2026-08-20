@@ -1,0 +1,126 @@
+[
+  {
+    "id": "amazing-grace",
+    "title": "Amazing Grace",
+    "artist": "Traditional",
+    "difficulty": "beginner",
+    "key": "G",
+    "timeSignature": "3/4",
+    "capo": 0,
+    "bpmOriginal": 76,
+    "bpmLevels": [50, 60, 70, 76],
+    "requiredChordIds": ["G", "C", "D", "Em"],
+    "requiredTechniqueIds": ["down-strum", "up-strum"],
+    "strummingComplexity": "simple",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "public_domain",
+    "sections": [
+      {
+        "id": "verse-1", "label": "Verse 1",
+        "chordProgression": ["G", "G", "G", "C", "G", "G", "Em", "D", "G", "G"],
+        "strummingPattern": "D . . D . . D . U D . .",
+        "beatsPerChord": 3,
+        "lyrics": "Amazing grace, how sweet the sound, that saved a wretch like me."
+      },
+      {
+        "id": "verse-2", "label": "Verse 2",
+        "chordProgression": ["G", "G", "G", "C", "G", "G", "Em", "D", "G", "G"],
+        "strummingPattern": "D . . D . . D . U D . .",
+        "beatsPerChord": 3,
+        "lyrics": "I once was lost, but now am found, was blind but now I see."
+      },
+      {
+        "id": "verse-3", "label": "Verse 3",
+        "chordProgression": ["G", "C", "G", "Em", "D", "G"],
+        "strummingPattern": "D . . D . . D . U D . .",
+        "beatsPerChord": 3,
+        "lyrics": "'Twas grace that taught my heart to fear, and grace my fears relieved."
+      }
+    ],
+    "practiceLoops": [
+      { "label": "G to C transition", "chords": ["G", "C"], "recommendedBpm": 50 },
+      { "label": "Em to D transition", "chords": ["Em", "D"], "recommendedBpm": 50 },
+      { "label": "Full verse", "sectionId": "verse-1", "recommendedBpm": 60 }
+    ],
+    "beginnerVersion": "Use the 3-finger G shape and drop the D-string bass note walk; just strum straight downstrokes on beat 1 of each measure instead of the full pattern."
+  },
+  {
+    "id": "riverbend",
+    "title": "Riverbend",
+    "artist": "Guitar Teacher (original teaching song)",
+    "difficulty": "beginner",
+    "key": "Am",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 90,
+    "bpmLevels": [50, 60, 70, 80, 90],
+    "requiredChordIds": ["Am", "C", "G", "Em"],
+    "requiredTechniqueIds": ["down-strum", "up-strum", "alternate-strum"],
+    "strummingComplexity": "moderate",
+    "fingerpickingRequired": false,
+    "barreChordRequired": false,
+    "lyricsSource": "original",
+    "sections": [
+      {
+        "id": "intro", "label": "Intro",
+        "chordProgression": ["Am", "C", "G", "Em"],
+        "strummingPattern": "D D U U D U", "beatsPerChord": 4,
+        "lyrics": null
+      },
+      {
+        "id": "verse-1", "label": "Verse 1",
+        "chordProgression": ["Am", "C", "G", "Em", "Am", "C", "G", "G"],
+        "strummingPattern": "D D U U D U", "beatsPerChord": 4,
+        "lyrics": "Down by the riverbend, where the water runs slow, I found a quiet place to let it go."
+      },
+      {
+        "id": "chorus", "label": "Chorus",
+        "chordProgression": ["C", "G", "Am", "Em"],
+        "strummingPattern": "D DU UDU", "beatsPerChord": 4,
+        "lyrics": "So carry me, carry me home, carry me where the wild things roam."
+      },
+      {
+        "id": "outro", "label": "Outro",
+        "chordProgression": ["Am", "G", "Am"],
+        "strummingPattern": "D . . . D . . .", "beatsPerChord": 4,
+        "lyrics": null
+      }
+    ],
+    "practiceLoops": [
+      { "label": "Am to C transition", "chords": ["Am", "C"], "recommendedBpm": 50 },
+      { "label": "Chorus pattern only", "sectionId": "chorus", "recommendedBpm": 60 },
+      { "label": "Full verse", "sectionId": "verse-1", "recommendedBpm": 70 }
+    ],
+    "beginnerVersion": "Replace the chorus's syncopated 'D DU UDU' with plain quarter-note downstrokes until the chord changes feel automatic."
+  },
+  {
+    "id": "barre-town",
+    "title": "Barre Town",
+    "artist": "Guitar Teacher (original teaching song)",
+    "difficulty": "intermediate",
+    "key": "F",
+    "timeSignature": "4/4",
+    "capo": 0,
+    "bpmOriginal": 100,
+    "bpmLevels": [55, 65, 80, 100],
+    "requiredChordIds": ["F", "C", "G", "Am"],
+    "requiredTechniqueIds": ["down-strum", "up-strum", "barre-chords", "palm-muting"],
+    "strummingComplexity": "moderate",
+    "fingerpickingRequired": false,
+    "barreChordRequired": true,
+    "lyricsSource": "none",
+    "lyricsNote": "This is an instructional placeholder song for practicing barre chords — no lyrics are included. To sing along to a real copyrighted song, add your own licensed lyric text in Song Progress, or look it up from a source you have rights to use.",
+    "sections": [
+      { "id": "verse-1", "label": "Verse", "chordProgression": ["F", "C", "G", "Am"], "strummingPattern": "D D U D U", "beatsPerChord": 4, "lyrics": null },
+      { "id": "chorus", "label": "Chorus", "chordProgression": ["C", "G", "F", "F"], "strummingPattern": "(palm mute) D D U D U", "beatsPerChord": 4, "lyrics": null },
+      { "id": "bridge", "label": "Bridge", "chordProgression": ["Am", "F", "C", "G"], "strummingPattern": "D . U . D U D U", "beatsPerChord": 4, "lyrics": null }
+    ],
+    "practiceLoops": [
+      { "label": "F barre chord isolation", "chords": ["F"], "recommendedBpm": 55 },
+      { "label": "F to C transition", "chords": ["F", "C"], "recommendedBpm": 55 },
+      { "label": "Full verse", "sectionId": "verse-1", "recommendedBpm": 65 }
+    ],
+    "beginnerVersion": "Use the simplified 4-string F shape until the full barre is comfortable, and skip the palm muting in the chorus at first."
+  }
+]

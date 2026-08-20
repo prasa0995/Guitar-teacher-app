@@ -1,0 +1,12 @@
+services:
+  guitar-teacher:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - SESSION_SECRET=${SESSION_SECRET}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
