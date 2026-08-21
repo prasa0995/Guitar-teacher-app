@@ -11,6 +11,13 @@ function validEmail(email) {
   return typeof email === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+// Temporary diagnostic endpoint — no auth required, no secrets exposed
+// (emails only, no passwords/hashes) — for tracking down the Netlify
+// storage persistence issue. Safe to remove once resolved.
+router.get('/debug', (req, res) => {
+  res.json(store.getDebugInfo());
+});
+
 router.post('/signup', authLimiter, (req, res) => {
   const { email, password, securityQuestion, securityAnswer } = req.body || {};
   if (!validEmail(email)) return res.status(400).json({ error: 'Valid email required' });

@@ -72,15 +72,25 @@ async function getBlobStore() {
   return blobStore;
 }
 
+// Captured for the /api/auth/debug diagnostic endpoint — lets us see what
+// actually happened on Netlify without needing to dig through their log UI.
+let lastHydrateError = null;
+let lastFlushError = null;
+let hydrateCount = 0;
+let flushCount = 0;
+
 // Loads state from Netlify Blobs at the start of a function invocation.
 // Only ever called by netlify/functions/api.js.
 async function hydrate() {
   usingBlobs = true;
+  hydrateCount++;
   try {
     const bs = await getBlobStore();
     const raw = await bs.get('state', { type: 'json' });
     state = raw ? Object.assign(emptyState(), raw) : emptyState();
+    lastHydrateError = null;
   } catch (err) {
+    lastHydrateError = err.message;
     console.error('Blob hydrate failed, starting fresh for this request:', err.message);
     state = emptyState();
   }
@@ -89,12 +99,27 @@ async function hydrate() {
 // Writes state back to Netlify Blobs at the end of a function invocation.
 async function flush() {
   if (!usingBlobs) return;
+  flushCount++;
   try {
     const bs = await getBlobStore();
     await bs.setJSON('state', state);
+    lastFlushError = null;
   } catch (err) {
+    lastFlushError = err.message;
     console.error('Blob flush failed — changes from this request may be lost:', err.message);
   }
+}
+
+function getDebugInfo() {
+  return {
+    usingBlobs,
+    hydrateCount,
+    flushCount,
+    lastHydrateError,
+    lastFlushError,
+    userCount: state.users.length,
+    userEmails: state.users.map((u) => u.email),
+  };
 }
 
 function ensureUserBuckets(userId) {
@@ -279,4 +304,5 @@ module.exports = {
   ensureUserBuckets,
   hydrate,
   flush,
+  getDebugInfo,
 };
