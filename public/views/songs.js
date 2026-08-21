@@ -24,14 +24,47 @@ async function render(main) {
   main.appendChild(formHost);
   addBtn.onclick = () => { formHost.innerHTML = ''; formHost.appendChild(addSongForm(chords, () => { formHost.innerHTML = ''; loadAndDraw(''); })); };
 
+  const generateHost = h('div');
+  main.appendChild(generateHost);
+
   const grid = h('div', { class: 'grid grid-3' });
   main.appendChild(grid);
 
   let debounceTimer;
   searchInput.oninput = () => {
     clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => loadAndDraw(searchInput.value), 200);
+    debounceTimer = setTimeout(() => { drawGenerateCard(searchInput.value); loadAndDraw(searchInput.value); }, 200);
   };
+
+  function drawGenerateCard(q) {
+    generateHost.innerHTML = '';
+    if (!q || !q.trim()) return;
+    const card = h('div', { class: 'card', style: 'margin:12px 0;border-color:var(--accent-2);' });
+    const btn = h('button', { class: 'secondary' }, `✨ Generate "${q}" with AI`);
+    const msg = h('p', { class: 'muted', style: 'margin-top:8px;display:none;' });
+    btn.onclick = async () => {
+      btn.disabled = true; btn.textContent = 'Generating full lesson…';
+      msg.style.display = 'none';
+      try {
+        const res = await api('/songs/generate', { method: 'POST', body: { title: q } });
+        if (!res.available) {
+          msg.textContent = `Not available: ${res.reason}`;
+          msg.style.display = 'block';
+        } else {
+          navigate(`#song/${res.song.id}`);
+          return;
+        }
+      } catch (e) {
+        msg.textContent = `Error: ${e.message}`;
+        msg.style.display = 'block';
+      }
+      btn.disabled = false; btn.textContent = `✨ Generate "${q}" with AI`;
+    };
+    card.appendChild(h('p', {}, "Don't see it below? Any song, any language — the AI builds a full chord/rhythm lesson for it (no lyrics, chords/rhythm only)."));
+    card.appendChild(btn);
+    card.appendChild(msg);
+    generateHost.appendChild(card);
+  }
 
   async function loadAndDraw(q) {
     const [{ songs }, rec] = await Promise.all([
@@ -43,7 +76,7 @@ async function render(main) {
 
     grid.innerHTML = '';
     if (!songs.length) {
-      grid.appendChild(h('p', { class: 'muted' }, q ? `No songs match "${q}". Try "+ Add a song" to add it yourself.` : 'No songs yet.'));
+      grid.appendChild(h('p', { class: 'muted' }, q ? `No songs match "${q}" in the library yet — try generating it with AI above, or "+ Add a song" yourself.` : 'No songs yet.'));
       return;
     }
     songs.forEach((s) => {
@@ -55,7 +88,7 @@ async function render(main) {
 
       const card = h('div', { class: 'card', style: 'cursor:pointer;' });
       card.onclick = () => navigate(`#song/${s.id}`);
-      card.appendChild(h('h3', {}, s.title + (s.custom ? ' ✏️' : '')));
+      card.appendChild(h('h3', {}, s.title + (s.aiGenerated ? ' ✨' : s.custom ? ' ✏️' : '')));
       card.appendChild(h('p', { class: 'muted' }, `${s.artist} · ${s.difficulty} · Key of ${s.key} · ${s.timeSignature}`));
       card.appendChild(h('span', { class: `pill ${readiness.cls}` }, readiness.label));
       grid.appendChild(card);

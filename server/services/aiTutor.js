@@ -258,4 +258,45 @@ async function suggestSongChords(title, artist) {
   }
 }
 
-module.exports = { buildContext, answer, ruleBasedAnswer, suggestSongChords };
+// Generates a FULL multi-section lesson (Intro/Verse/Chorus/Bridge/Outro,
+// each with its own chord progression + strumming) for any song title in
+// any language — the AI isn't limited to a fixed catalog. Chords-only, no
+// lyrics (same licensing stance as the rest of the song data). Best-effort:
+// low confidence means the AI doesn't actually recognize the song and is
+// giving a plausible generic guess instead.
+async function generateFullSong(title, artist) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) {
+    return { available: false, reason: 'No ANTHROPIC_API_KEY configured on the server — add one to enable AI song generation.' };
+  }
+  const systemPrompt =
+    `You generate a structured, chords-and-rhythm-only guitar lesson breakdown for ANY song the user names, ` +
+    `in any language — you are not limited to a fixed list. NEVER include lyrics, only chords/rhythm/structure. ` +
+    `Use only these chord ids (standard shapes): ${CHORD_IDS.join(', ')}. ` +
+    `Break the song into realistic sections (Intro/Verse/Pre-Chorus/Chorus/Bridge/Outro as appropriate — only include ` +
+    `sections that actually make sense for this song, 2-5 sections total). ` +
+    `Reply with ONLY compact JSON, no prose, no markdown fences, matching exactly: ` +
+    `{"title":"...","artist":"...","key":"G","timeSignature":"4/4","capo":0,"bpmOriginal":95,` +
+    `"sections":[{"label":"Intro","chordProgression":["G","C"],"strummingPattern":"D D U U D U","beatsPerChord":4}],` +
+    `"requiredTechniqueIds":["down-strum","up-strum"],"beginnerVersion":"one sentence simplification tip",` +
+    `"confidence":"low|medium|high"}. ` +
+    `Valid requiredTechniqueIds values: down-strum, up-strum, alternate-strum, palm-muting, hammer-on, pull-off, slide, ` +
+    `bend, vibrato, fingerpicking, muting, barre-chords. ` +
+    `If you don't actually recognize the specific song, still return a stylistically plausible generic guess and set confidence to "low" — never refuse.`;
+  try {
+    const text = await callAnthropic(apiKey, systemPrompt, `Song: "${title}" by ${artist || 'unknown artist'}`, []);
+    const jsonMatch = text.match(/\{[\s\S]*\}/);
+    const parsed = JSON.parse(jsonMatch ? jsonMatch[0] : text);
+    parsed.sections = (parsed.sections || []).map((s) => ({
+      ...s,
+      chordProgression: (s.chordProgression || []).filter((c) => CHORD_IDS.includes(c)),
+    })).filter((s) => s.chordProgression.length);
+    if (!parsed.sections.length) throw new Error('No usable sections in AI response');
+    parsed.requiredTechniqueIds = (parsed.requiredTechniqueIds || []).filter((t) => techniques.some((tt) => tt.id === t));
+    return { available: true, song: parsed };
+  } catch (err) {
+    return { available: false, reason: `AI song generation failed: ${err.message}` };
+  }
+}
+
+module.exports = { buildContext, answer, ruleBasedAnswer, suggestSongChords, generateFullSong };

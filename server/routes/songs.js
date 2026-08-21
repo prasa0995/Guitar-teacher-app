@@ -5,7 +5,7 @@ const chords = require('../data/chords.json');
 const techniques = require('../data/techniques.json');
 const { recommendSongs } = require('../services/recommendation');
 const { getAllSongs, findSong } = require('../services/songCatalog');
-const { suggestSongChords } = require('../services/aiTutor');
+const { suggestSongChords, generateFullSong } = require('../services/aiTutor');
 
 const router = express.Router();
 
@@ -29,6 +29,56 @@ router.post('/suggest', async (req, res) => {
   if (!title || !title.trim()) return res.status(400).json({ error: 'Song title required' });
   const result = await suggestSongChords(title.trim(), artist);
   res.json(result);
+});
+
+// Generates a full multi-section lesson for ANY song title/artist (any
+// language, not limited to a fixed catalog) and saves it as a custom song —
+// this is what powers "search any song" without needing licensed tab data.
+router.post('/generate', async (req, res) => {
+  const { title, artist } = req.body || {};
+  if (!title || !title.trim()) return res.status(400).json({ error: 'Song title required' });
+
+  const result = await generateFullSong(title.trim(), artist);
+  if (!result.available) return res.status(200).json(result);
+
+  const g = result.song;
+  const bpm = parseInt(g.bpmOriginal, 10) || 90;
+  const allChords = [...new Set(g.sections.flatMap((s) => s.chordProgression))];
+  const barreChordRequired = allChords.some((id) => chords.find((c) => c.id === id)?.family === 'barre');
+
+  const song = {
+    id: newId('song'),
+    title: g.title || title.trim(),
+    artist: g.artist || artist || 'Unknown',
+    difficulty: barreChordRequired || g.confidence === 'low' ? 'intermediate' : 'beginner',
+    key: g.key || 'C',
+    timeSignature: g.timeSignature || '4/4',
+    capo: parseInt(g.capo, 10) || 0,
+    bpmOriginal: bpm,
+    bpmLevels: [Math.max(30, bpm - 30), Math.max(40, bpm - 20), Math.max(50, bpm - 10), bpm],
+    requiredChordIds: allChords,
+    requiredTechniqueIds: g.requiredTechniqueIds || [],
+    strummingComplexity: 'ai-generated',
+    fingerpickingRequired: (g.requiredTechniqueIds || []).includes('fingerpicking'),
+    barreChordRequired,
+    lyricsSource: 'none',
+    lyricsNote: `AI-generated lesson (confidence: ${g.confidence || 'unknown'}) — chords and rhythm only, no lyrics. Treat this as a helpful starting point, not a guaranteed-accurate transcription; adjust by ear as needed.`,
+    custom: true,
+    aiGenerated: true,
+    confidence: g.confidence || 'unknown',
+    sections: g.sections.map((s, i) => ({
+      id: `section-${i}`, label: s.label || `Part ${i + 1}`,
+      chordProgression: s.chordProgression, strummingPattern: s.strummingPattern || 'D D U U D U',
+      beatsPerChord: parseInt(s.beatsPerChord, 10) || 4, lyrics: null,
+    })),
+    practiceLoops: g.sections.slice(0, 2).map((s) => ({
+      label: `${s.label} chord loop`, chords: s.chordProgression.slice(0, 2), recommendedBpm: Math.max(30, bpm - 30),
+    })),
+    beginnerVersion: g.beginnerVersion || null,
+  };
+
+  store.addCustomSong(req.userId, song);
+  res.json({ available: true, song });
 });
 
 // Add a song of your own — any title/artist. Chords are just letter names
