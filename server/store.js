@@ -22,17 +22,18 @@ function emptyState() {
   };
 }
 
-// On Netlify, the deployed filesystem is read-only (only /tmp is writable and
-// doesn't survive between invocations), so persistence there goes through
-// Netlify Blobs instead — see hydrate()/flush() below, called once per
-// request by netlify/functions/api.js. Locally, the plain JSON file is used
-// exactly as before. Every route/service still just calls the same
-// synchronous store.* methods below either way — only load/save differ.
-function isNetlify() {
-  return !!process.env.NETLIFY || !!process.env.NETLIFY_DEV;
-}
+// On Netlify, the deployed filesystem is read-only, so persistence there
+// goes through Netlify Blobs instead — see hydrate()/flush() below, called
+// once per request, ONLY by netlify/functions/api.js. Locally, the plain
+// JSON file is used exactly as before (index.js never calls hydrate/flush
+// at all). Whether we're in "Blobs mode" is decided by actual usage — the
+// first hydrate() call sets it — not by guessing at environment variables
+// (Netlify doesn't reliably expose the same env vars at function-runtime
+// that it does at build-time, which silently broke persistence before:
+// signups worked in-memory for one request, then vanished on the next).
+let usingBlobs = false;
 
-let state = isNetlify() ? emptyState() : load();
+let state = load();
 
 function load() {
   try {
@@ -46,14 +47,16 @@ function load() {
     const parsed = JSON.parse(raw);
     return Object.assign(emptyState(), parsed);
   } catch (err) {
-    console.error('Failed to load store, starting fresh:', err.message);
-    return emptyState();
+    // Expected on Netlify (read-only filesystem) until the first hydrate()
+    // call switches us into Blobs mode — not a real error there.
+    state = emptyState();
+    return state;
   }
 }
 
 let saveTimer = null;
 function persist() {
-  if (isNetlify()) return; // flush() (Blobs) handles persistence there instead
+  if (usingBlobs) return; // flush() (Blobs) handles persistence there instead
   clearTimeout(saveTimer);
   saveTimer = setTimeout(() => {
     fs.writeFileSync(DATA_FILE, JSON.stringify(state, null, 2));
@@ -70,9 +73,9 @@ async function getBlobStore() {
 }
 
 // Loads state from Netlify Blobs at the start of a function invocation.
-// No-op locally (the file was already loaded into `state` above).
+// Only ever called by netlify/functions/api.js.
 async function hydrate() {
-  if (!isNetlify()) return;
+  usingBlobs = true;
   try {
     const bs = await getBlobStore();
     const raw = await bs.get('state', { type: 'json' });
@@ -84,9 +87,8 @@ async function hydrate() {
 }
 
 // Writes state back to Netlify Blobs at the end of a function invocation.
-// No-op locally (persist() already wrote the file on every change).
 async function flush() {
-  if (!isNetlify()) return;
+  if (!usingBlobs) return;
   try {
     const bs = await getBlobStore();
     await bs.setJSON('state', state);
