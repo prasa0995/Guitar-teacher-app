@@ -1,5 +1,6 @@
 import { api, h, navigate } from '../app.js';
 import { setScreenContext } from '../components/aiChat.js';
+import { cacheSong } from '../components/songCache.js';
 
 export function register(registerRoute) {
   registerRoute('songs', render);
@@ -51,6 +52,7 @@ async function render(main) {
           msg.textContent = `Not available: ${res.reason}`;
           msg.style.display = 'block';
         } else {
+          cacheSong(res.song);
           navigate(`#song/${res.song.id}`);
           return;
         }
@@ -166,13 +168,14 @@ function addSongForm(chords, onDone) {
       return;
     }
     try {
-      await api('/songs/custom', { method: 'POST', body: {
+      const res = await api('/songs/custom', { method: 'POST', body: {
         title: title.value, artist: artist.value, key: key.value, bpmOriginal: bpm.value,
         timeSignature: ts.value, capo: capo.value, chordProgression,
         requiredChordIds: chordProgression.filter((c) => chords.some((ch) => ch.id === c)),
         strummingPattern: strum.value, lyrics: lyrics.value,
       } });
-      onDone();
+      cacheSong(res.song);
+      navigate(`#song/${res.song.id}`);
     } catch (e) { errorBox.textContent = e.message; errorBox.style.display = 'block'; }
   } }, 'Add song'));
   row.appendChild(h('button', { class: 'ghost', onclick: onDone }, 'Cancel'));

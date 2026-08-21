@@ -2,13 +2,17 @@ import { api, h } from '../app.js';
 import { Metronome } from '../components/metronome.js';
 import { setScreenContext } from '../components/aiChat.js';
 import { createRhythmLane } from '../components/rhythmLane.js';
+import { getCachedSong } from '../components/songCache.js';
 
 export function register(registerRoute) {
   registerRoute('song', render);
 }
 
 async function render(main, [id]) {
-  const { song, progress } = await api(`/songs/${id}`);
+  // Prefer a just-created/generated song already held client-side — avoids
+  // a brief write-then-read lag in the backing storage right after saving.
+  const cached = getCachedSong(id);
+  const { song, progress } = cached ? { song: cached, progress: null } : await api(`/songs/${id}`);
   setScreenContext({ screen: 'song', songId: id });
 
   const view = {
