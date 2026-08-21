@@ -82,17 +82,27 @@ async function render(main, [id]) {
       videoCard.appendChild(wrap);
       videoCard.appendChild(h('button', { class: 'ghost', style: 'margin-top:10px;', onclick: () => drawVideoCard(null) }, 'Change link'));
     } else {
-      videoCard.appendChild(h('p', { class: 'muted' }, "This app can't stream copyrighted recordings itself, but you can paste a YouTube link to the actual song here to play it alongside the practice view."));
-      const input = h('input', { placeholder: 'Paste a YouTube link, e.g. https://youtu.be/...' });
-      const row = h('div', { class: 'row', style: 'margin-top:8px;' });
-      row.appendChild(input);
-      row.appendChild(h('button', { class: 'primary', onclick: async () => {
+      videoCard.appendChild(h('p', { class: 'muted' }, "This app can't stream or auto-attach copyrighted recordings itself — one manual step gets the real song playing alongside the practice view below."));
+      const searchQuery = encodeURIComponent(`${song.title} ${song.artist}`.trim());
+      const row1 = h('div', { class: 'row', style: 'margin-bottom:10px;' });
+      row1.appendChild(h('a', {
+        href: `https://www.youtube.com/results?search_query=${searchQuery}`,
+        target: '_blank', rel: 'noopener',
+        class: 'ghost', style: 'display:inline-block;text-decoration:none;',
+      }, `🔍 Find "${song.title}" on YouTube`));
+      videoCard.appendChild(row1);
+      videoCard.appendChild(h('p', { class: 'muted', style: 'font-size:12.5px;margin-top:0;' }, 'Opens YouTube in a new tab — copy the video\'s URL, come back, and paste it below.'));
+
+      const input = h('input', { placeholder: 'Paste the YouTube link here, e.g. https://youtu.be/...' });
+      const row2 = h('div', { class: 'row', style: 'margin-top:8px;' });
+      row2.appendChild(input);
+      row2.appendChild(h('button', { class: 'primary', onclick: async () => {
         const vid = extractYouTubeId(input.value);
         if (!vid) { alert('Could not read a video ID from that link — paste a full YouTube URL.'); return; }
         await api(`/songs/${song.id}/progress`, { method: 'POST', body: { videoId: vid } });
         drawVideoCard(vid);
       } }, 'Attach'));
-      videoCard.appendChild(row);
+      videoCard.appendChild(row2);
     }
   }
 
