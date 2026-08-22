@@ -128,8 +128,12 @@ async function boot() {
 
   if (!state.user) {
     app.innerHTML = '';
-    const mod = await import('./views/authScreens.js');
-    mod.render(app, boot);
+    const landing = await import('./views/landing.js');
+    landing.render(app, async (mode) => {
+      app.innerHTML = '';
+      const auth = await import('./views/authScreens.js');
+      auth.render(app, boot, mode, boot);
+    });
     return;
   }
 

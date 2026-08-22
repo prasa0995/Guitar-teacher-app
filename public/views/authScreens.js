@@ -39,8 +39,8 @@ function noteParticles() {
   }, n));
 }
 
-export function render(root, onAuthed) {
-  let mode = 'login'; // login | signup | forgot
+export function render(root, onAuthed, initialMode = 'login', onBack = null) {
+  let mode = initialMode; // login | signup | forgot
   const page = h('div', { class: 'auth-page' });
   noteParticles().forEach((n) => page.appendChild(n));
   const wrap = h('div', { class: 'auth-card' });
@@ -49,6 +49,7 @@ export function render(root, onAuthed) {
 
   function draw() {
     wrap.innerHTML = '';
+    if (onBack) wrap.appendChild(h('a', { href: '#', style: 'display:inline-block;margin-bottom:10px;', onclick: (e) => { e.preventDefault(); onBack(); } }, '← Back to home'));
     wrap.appendChild(h('div', { class: 'auth-hero' }, [
       h('div', { class: 'glyph' }, '🎸'),
       h('h1', {}, 'AI GuitarSensei'),
