@@ -128,6 +128,17 @@ async function boot() {
 
   if (!state.user) {
     app.innerHTML = '';
+    // The "app" link (#app) — and directly landing on #login/#signup —
+    // skip the marketing page and go straight into sign-in. Plain visits
+    // to the bare domain show the landing page (the "website" link).
+    const rawHash = location.hash.replace('#', '');
+    const directModes = { app: 'login', login: 'login', signup: 'signup' };
+    if (directModes[rawHash]) {
+      const auth = await import('./views/authScreens.js');
+      const afterAuth = () => { location.hash = '#home'; boot(); };
+      auth.render(app, afterAuth, directModes[rawHash], () => { location.hash = ''; boot(); });
+      return;
+    }
     const landing = await import('./views/landing.js');
     landing.render(app, async (mode) => {
       app.innerHTML = '';
