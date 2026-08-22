@@ -8,18 +8,18 @@ const SECURITY_QUESTIONS = [
   'What was the name of your first pet?',
 ];
 
-// A password <input> with a show/hide toggle button next to it.
-// Returns the wrapping row element; access the value via `.input.value`.
+// A password <input> with a show/hide toggle button overlaid inside it.
+// Returns the wrapping element; access the value via `.input.value`.
 function passwordField(attrs) {
-  const input = h('input', { type: 'password', style: 'flex:1;', ...attrs });
-  const toggle = h('button', { type: 'button', class: 'ghost', style: 'padding:0 12px;font-size:13px;', title: 'Show/hide password' }, '👁');
+  const input = h('input', { type: 'password', ...attrs });
+  const toggle = h('button', { type: 'button', class: 'password-toggle', title: 'Show/hide password' }, '👁');
   toggle.onclick = (e) => {
     e.preventDefault();
     const show = input.type === 'password';
     input.type = show ? 'text' : 'password';
     toggle.textContent = show ? '🙈' : '👁';
   };
-  const wrap = h('div', { class: 'row', style: 'gap:6px;align-items:stretch;' }, [input, toggle]);
+  const wrap = h('div', { class: 'password-wrap' }, [input, toggle]);
   wrap.input = input;
   return wrap;
 }
@@ -53,7 +53,8 @@ export function render(root, onAuthed) {
       h('div', { class: 'glyph' }, '🎸'),
       h('h1', {}, 'AI GuitarSensei'),
       h('p', { class: 'tagline' }, 'Unleash the Guitarist in You'),
-      h('p', { class: 'muted' }, 'Your personal guitar teacher — chords, theory, songs, and practice, all guided by AI.'),
+      h('p', { class: 'headline' }, 'Your Personal Guitar Teacher, Powered by AI, Built for You'),
+      h('p', { class: 'subtext' }, 'Chords, theory, songs, and practice all personalized to how you learn.'),
     ]));
     const card = h('div', { class: 'card', style: 'margin-top:18px;' });
 
@@ -117,7 +118,7 @@ export function render(root, onAuthed) {
           qBox.textContent = `Security question: ${question}`;
           qBox.style.display = 'block';
           answer.style.display = 'block';
-          newPasswordRow.style.display = 'flex';
+          newPasswordRow.style.display = 'block';
           resetBtn.style.display = 'inline-block';
         } catch (e) { errorBox.textContent = e.message; errorBox.style.display = 'block'; }
       } }, 'Find my account');

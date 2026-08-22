@@ -323,6 +323,62 @@ p { margin: 0 0 8px; line-height: 1.55; }
 @keyframes shimmer {
   to { background-position: 300% center; }
 }
+.auth-hero .headline {
+  font-family: var(--font-display); font-weight: 700; font-size: 15.5px; line-height: 1.4;
+  color: var(--text); margin: 6px 0 4px;
+}
+.auth-hero .subtext {
+  font-size: 13px; color: var(--text-dim); line-height: 1.5; margin: 0 0 4px;
+}
+
+/* Auth card: glassy premium treatment, distinct from the plain .card look */
+.auth-card .card {
+  background: linear-gradient(180deg, rgba(28,32,39,0.9), rgba(20,23,29,0.94));
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,138,61,0.05) inset;
+}
+.auth-card label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-dim); }
+.auth-card input {
+  background: rgba(10,12,16,0.55);
+  border: 1px solid rgba(255,255,255,0.09);
+  border-radius: 12px;
+  padding: 13px 15px;
+  font-size: 14.5px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+.auth-card input:focus {
+  border-color: rgba(255,138,61,0.55);
+  background: rgba(10,12,16,0.75);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3), 0 0 0 4px rgba(255,138,61,0.14);
+}
+.auth-card input::placeholder { color: #5c6470; }
+
+/* Password field: eye toggle sits inside the input as an overlay, not a separate box */
+.auth-card .password-wrap { position: relative; }
+.auth-card .password-wrap input { width: 100%; padding-right: 44px; }
+.auth-card .password-toggle {
+  position: absolute; top: 50%; right: 6px; transform: translateY(-50%);
+  width: 32px; height: 32px; border-radius: 9px; padding: 0;
+  background: transparent; border: none; color: var(--text-dim);
+  display: flex; align-items: center; justify-content: center; font-size: 15px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.auth-card .password-toggle:hover { background: rgba(255,255,255,0.07); color: var(--text); }
+
+.auth-card button.primary {
+  background: linear-gradient(135deg, #ff8a3d, #ff5e7e);
+  box-shadow: 0 6px 20px rgba(255,94,126,0.35);
+  border-radius: 12px;
+}
+.auth-card button.primary:hover { filter: brightness(1.08); box-shadow: 0 8px 26px rgba(255,94,126,0.45); }
+.auth-card button.ghost {
+  border-radius: 12px;
+  background: rgba(255,255,255,0.03);
+  border-color: rgba(255,255,255,0.09);
+}
+.auth-card button.ghost:hover { background: rgba(255,255,255,0.07); }
 
 /* Onboarding */
 .onboard-wrap { max-width: 640px; margin: 0 auto; }
