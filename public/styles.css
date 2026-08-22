@@ -256,20 +256,73 @@ p { margin: 0 0 8px; line-height: 1.55; }
 /* Auth screens */
 .auth-page {
   min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px;
-  background:
-    radial-gradient(900px 500px at 15% 10%, rgba(240,166,61,0.10), transparent 55%),
-    radial-gradient(900px 500px at 85% 90%, rgba(69,194,177,0.09), transparent 55%),
-    var(--bg);
+  position: relative; overflow: hidden;
+  background: #0a0710;
 }
-.auth-card { max-width: 440px; width: 100%; }
+.auth-page::before {
+  content: ''; position: absolute; inset: -10%;
+  background:
+    radial-gradient(700px 550px at 12% 15%, rgba(255,138,61,0.30), transparent 55%),
+    radial-gradient(650px 550px at 88% 20%, rgba(168,85,247,0.26), transparent 55%),
+    radial-gradient(750px 600px at 50% 100%, rgba(255,94,126,0.22), transparent 55%),
+    radial-gradient(600px 500px at 90% 85%, rgba(69,194,177,0.18), transparent 55%);
+  animation: auroraDrift 16s ease-in-out infinite alternate;
+  filter: blur(10px);
+}
+@keyframes auroraDrift {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  50%  { transform: translate(-3%, 2%) scale(1.08); }
+  100% { transform: translate(2%, -3%) scale(1.03); }
+}
+.auth-page .note-particle {
+  position: absolute; opacity: 0.16; font-size: 28px; pointer-events: none;
+  animation: noteFloat linear infinite;
+  filter: drop-shadow(0 0 8px rgba(255,138,61,0.4));
+}
+@keyframes noteFloat {
+  0%   { transform: translateY(10vh) rotate(-8deg); opacity: 0; }
+  10%  { opacity: 0.18; }
+  90%  { opacity: 0.14; }
+  100% { transform: translateY(-110vh) rotate(10deg); opacity: 0; }
+}
+
+.auth-card { max-width: 460px; width: 100%; position: relative; z-index: 1; animation: authRise 0.6s cubic-bezier(0.16,1,0.3,1); }
+@keyframes authRise { from { opacity: 0; transform: translateY(18px) scale(0.98); } to { opacity: 1; transform: translateY(0) scale(1); } }
+
 .auth-hero { text-align: center; margin-bottom: 4px; }
 .auth-hero .glyph {
-  width: 56px; height: 56px; border-radius: 16px; margin: 0 auto 14px;
-  background: linear-gradient(135deg, var(--accent-strong), #e08a1f);
-  display: flex; align-items: center; justify-content: center; font-size: 26px;
-  box-shadow: 0 8px 22px rgba(240,166,61,0.35);
+  width: 68px; height: 68px; border-radius: 20px; margin: 0 auto 16px;
+  background: linear-gradient(135deg, #ff8a3d, #ff5e7e 55%, #a855f7);
+  background-size: 200% 200%;
+  animation: glyphFloat 4.5s ease-in-out infinite, glyphGradient 6s ease infinite;
+  display: flex; align-items: center; justify-content: center; font-size: 32px;
+  box-shadow: 0 10px 34px rgba(255,94,126,0.4), 0 0 0 1px rgba(255,255,255,0.06) inset;
 }
-.auth-hero h1 { font-size: 24px; margin-bottom: 4px; }
+@keyframes glyphFloat {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-9px) rotate(3deg); }
+}
+@keyframes glyphGradient {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.auth-hero h1 {
+  font-size: 26px; margin-bottom: 6px;
+  background: linear-gradient(135deg, #fff, #ffd9b3);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.auth-hero .tagline {
+  font-family: var(--font-display); font-weight: 700; font-size: 19px; margin: 2px 0 10px;
+  background: linear-gradient(90deg, #ff8a3d, #ff5e7e, #a855f7, #ff8a3d);
+  background-size: 300% auto;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  animation: shimmer 5s linear infinite;
+  letter-spacing: 0.2px;
+}
+@keyframes shimmer {
+  to { background-position: 300% center; }
+}
 
 /* Onboarding */
 .onboard-wrap { max-width: 640px; margin: 0 auto; }

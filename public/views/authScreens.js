@@ -30,9 +30,19 @@ function securityQuestionSelect() {
   return select;
 }
 
+const NOTES = ['🎵', '🎶', '🎸', '🎼', '🎵', '🎶'];
+
+function noteParticles() {
+  return NOTES.map((n, i) => h('span', {
+    class: 'note-particle',
+    style: `left:${8 + i * 16}%; animation-duration:${9 + i * 2}s; animation-delay:${i * 1.3}s;`,
+  }, n));
+}
+
 export function render(root, onAuthed) {
   let mode = 'login'; // login | signup | forgot
   const page = h('div', { class: 'auth-page' });
+  noteParticles().forEach((n) => page.appendChild(n));
   const wrap = h('div', { class: 'auth-card' });
   page.appendChild(wrap);
   root.appendChild(page);
@@ -42,6 +52,7 @@ export function render(root, onAuthed) {
     wrap.appendChild(h('div', { class: 'auth-hero' }, [
       h('div', { class: 'glyph' }, '🎸'),
       h('h1', {}, 'AI GuitarSensei'),
+      h('p', { class: 'tagline' }, 'Unleash the Guitarist in You'),
       h('p', { class: 'muted' }, 'Your personal guitar teacher — chords, theory, songs, and practice, all guided by AI.'),
     ]));
     const card = h('div', { class: 'card', style: 'margin-top:18px;' });
