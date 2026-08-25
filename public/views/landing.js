@@ -1,4 +1,6 @@
 import { h } from '../app.js';
+import { Metronome } from '../components/metronome.js';
+import { createRhythmLane } from '../components/rhythmLane.js';
 
 const FEATURES = [
   { icon: '🤖', title: 'AI Guitar Tutor', desc: 'Ask anything, anytime — "why does my C chord buzz?", "test me on my chords", "give me a 15-minute session." It knows exactly what you\'ve learned.' },
@@ -57,6 +59,18 @@ export function render(root, onGetStarted) {
   hero.appendChild(heroText);
   hero.appendChild(h('div', { class: 'landing-hero__visual' }, [heroMockup()]));
   page.appendChild(hero);
+
+  // Live demo — plays a real, running simulation of the practice player
+  // (same metronome + rhythm-lane code as the actual app) instead of a
+  // video file.
+  page.appendChild(h('section', { class: 'landing-section reveal', style: 'padding-top:0;' }, [
+    h('div', { class: 'landing-section__head' }, [
+      h('div', { class: 'landing-eyebrow' }, '▶ SEE IT IN ACTION'),
+      h('h2', {}, 'Hit play. Watch it teach.'),
+      h('p', { class: 'muted' }, "A live, running demo — the same chord and rhythm engine from the real app, not a screenshot."),
+    ]),
+    demoPlayer(),
+  ]));
 
   // Marquee ticker
   const track = h('div', { class: 'landing-marquee__track' });
@@ -218,6 +232,104 @@ function photoCard(src, caption) {
     h('img', { src, alt: caption }),
     h('div', { class: 'landing-photo__caption' }, caption),
   ]);
+}
+
+// A real, running mini practice-session simulation (same Metronome +
+// rhythm-lane engine as the actual song player) that starts on click —
+// the closest thing to "hit play, watch a video" without an actual
+// video file, which this environment has no tool to generate.
+function demoPlayer() {
+  const prog = ['Em', 'C', 'G', 'D'];
+  const bpc = 4;
+  const totalBeats = prog.length * bpc;
+  const strummingPattern = 'D D U U D U';
+  const bpm = 90;
+  const durationSec = 24;
+
+  const wrap = h('div', { class: 'landing-demo' });
+
+  const poster = h('div', { class: 'landing-demo__poster' }, [
+    h('div', { class: 'landing-demo__poster-bg' }),
+    h('div', { class: 'landing-demo__play', role: 'button', 'aria-label': 'Play demo' }, '▶'),
+    h('div', { class: 'landing-demo__poster-label' }, 'Live practice demo — 24 seconds, real audio'),
+  ]);
+
+  const chordNow = h('div', { class: 'landing-demo__chord' }, prog[0]);
+  const chordNext = h('div', { class: 'muted', style: 'text-align:center;font-size:13px;' }, `Next: ${prog[1]}`);
+  const dots = h('div', { class: 'beat-dots' });
+  for (let i = 0; i < bpc; i++) dots.appendChild(h('div', { class: 'beat-dot' }));
+  const canvas = h('canvas', { style: 'width:100%;height:76px;display:block;margin:12px 0;border-radius:10px;background:#f2f1fb;' });
+  const fill = h('div', { class: 'fill' });
+  const bar = h('div', { class: 'progress-bar' }, [fill]);
+  const pauseBtn = h('button', { class: 'ghost', type: 'button' }, '⏸ Pause');
+  const replayBtn = h('button', { class: 'ghost', type: 'button', style: 'display:none;' }, '↻ Replay');
+  const stage = h('div', { class: 'landing-demo__stage', style: 'display:none;' }, [
+    chordNow, chordNext, dots, canvas, bar,
+    h('div', { class: 'landing-demo__controls' }, [pauseBtn, replayBtn]),
+  ]);
+
+  wrap.appendChild(poster);
+  wrap.appendChild(stage);
+
+  let beatInCycle = 0, met = null, lane = null, rafId = null, elapsed = 0, timerId = null;
+
+  function onBeat({ isDownbeat }) {
+    if (!isDownbeat) return;
+    beatInCycle = (beatInCycle + 1) % totalBeats;
+    const chordIndex = Math.floor(beatInCycle / bpc) % prog.length;
+    chordNow.textContent = prog[chordIndex];
+    chordNext.textContent = `Next: ${prog[(chordIndex + 1) % prog.length]}`;
+    Array.from(dots.children).forEach((d, i) => d.classList.toggle('active', i === beatInCycle % bpc));
+  }
+
+  function animate() {
+    if (lane && met) lane.draw(met, () => ({ pattern: strummingPattern, beatsPerMeasure: bpc }));
+    rafId = requestAnimationFrame(animate);
+  }
+
+  function tickProgress() {
+    elapsed += 0.25;
+    fill.style.width = Math.min(100, (elapsed / durationSec) * 100) + '%';
+    if (elapsed >= durationSec) finish();
+  }
+
+  function start() {
+    poster.style.display = 'none';
+    stage.style.display = 'block';
+    beatInCycle = 0; elapsed = 0;
+    met = new Metronome({ bpm, beatsPerMeasure: bpc, onBeat });
+    lane = createRhythmLane(canvas);
+    met.start();
+    animate();
+    timerId = setInterval(tickProgress, 250);
+    pauseBtn.textContent = '⏸ Pause'; pauseBtn.style.display = 'inline-block';
+    replayBtn.style.display = 'none';
+  }
+
+  function finish() {
+    if (met) met.stop();
+    cancelAnimationFrame(rafId);
+    clearInterval(timerId);
+    pauseBtn.style.display = 'none';
+    replayBtn.style.display = 'inline-block';
+  }
+
+  function togglePause() {
+    if (!met) return;
+    if (met.running) {
+      met.stop(); clearInterval(timerId);
+      pauseBtn.textContent = '▶ Resume';
+    } else {
+      met.start(); timerId = setInterval(tickProgress, 250);
+      pauseBtn.textContent = '⏸ Pause';
+    }
+  }
+
+  poster.onclick = start;
+  pauseBtn.onclick = togglePause;
+  replayBtn.onclick = start;
+
+  return wrap;
 }
 
 function heroMockup() {

@@ -504,6 +504,46 @@ table.data-table tr:last-child td { border-bottom: none; }
 .landing-mock .strum-seq { color: var(--land-ink); }
 .landing-mock .beat.active .arrow { color: var(--land-blue-strong); }
 
+/* Live demo "player" */
+.landing-demo {
+  max-width: 620px; margin: 0 auto; border-radius: 22px; overflow: hidden;
+  background: #fff; border: 1px solid var(--land-border);
+  box-shadow: 0 24px 60px rgba(37,99,235,0.1);
+}
+.landing-demo__poster { position: relative; aspect-ratio: 16/9; cursor: pointer; overflow: hidden; }
+.landing-demo__poster-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(400px 260px at 20% 20%, rgba(37,99,235,0.35), transparent 60%),
+    radial-gradient(400px 260px at 80% 80%, rgba(236,72,153,0.35), transparent 60%),
+    linear-gradient(135deg, #1a1a2e, #14162b);
+}
+.landing-demo__play {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 76px; height: 76px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--land-blue-strong), var(--land-pink));
+  display: flex; align-items: center; justify-content: center; color: #fff; font-size: 26px;
+  box-shadow: 0 12px 32px rgba(236,72,153,0.4);
+  transition: transform 0.2s ease;
+}
+.landing-demo__poster:hover .landing-demo__play { transform: translate(-50%, -50%) scale(1.08); }
+.landing-demo__poster-label {
+  position: absolute; left: 20px; bottom: 16px; color: #fff; font-weight: 700;
+  font-family: var(--font-display); font-size: 13.5px; text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+.landing-demo__stage { padding: 26px 24px; }
+.landing-demo__chord {
+  font-family: var(--font-display); font-size: 48px; font-weight: 800; text-align: center;
+  background: linear-gradient(135deg, var(--land-blue-strong), var(--land-pink));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.landing-demo__stage .beat-dot { background: #ecebf5; border-color: #ecebf5; }
+.landing-demo__stage .beat-dot.active { background: var(--land-pink); border-color: var(--land-pink); }
+.landing-demo__stage .progress-bar { background: #ecebf5; }
+.landing-demo__stage .progress-bar .fill { background: linear-gradient(90deg, var(--land-blue-strong), var(--land-pink)); }
+.landing-demo__controls { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+.landing-demo__controls button { background: #fff; border-color: var(--land-border); color: var(--land-ink); }
+
 /* Marquee ticker — pure-CSS continuous motion */
 .landing-marquee { border-top: 1px solid var(--land-border); border-bottom: 1px solid var(--land-border); overflow: hidden; padding: 14px 0; background: linear-gradient(90deg, rgba(37,99,235,0.04), rgba(236,72,153,0.04)); }
 .landing-marquee__track { display: flex; width: max-content; animation: marquee 22s linear infinite; gap: 40px; }
