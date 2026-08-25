@@ -136,7 +136,7 @@ async function boot() {
     if (directModes[rawHash]) {
       const auth = await import('./views/authScreens.js');
       const afterAuth = () => { location.hash = '#home'; boot(); };
-      auth.render(app, afterAuth, directModes[rawHash], () => { location.hash = ''; boot(); });
+      auth.render(app, afterAuth, directModes[rawHash], null);
       return;
     }
     const landing = await import('./views/landing.js');
