@@ -178,7 +178,7 @@ export function render(root, onGetStarted) {
 
 function photoCard(src, caption) {
   return h('div', { class: 'landing-photo' }, [
-    h('img', { src, alt: caption, loading: 'lazy' }),
+    h('img', { src, alt: caption }),
     h('div', { class: 'landing-photo__caption' }, caption),
   ]);
 }
