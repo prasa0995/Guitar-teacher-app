@@ -26,11 +26,9 @@ const MARQUEE_ITEMS = ['Chords', 'Theory', 'Songs', 'Rhythm', 'Tuner', 'Metronom
 
 const FAQS = [
   { q: 'Do I need any guitar experience to start?', a: "None at all. Onboarding figures out your actual starting point — even if that's holding a guitar for the first time — and builds your path from there." },
-  { q: 'Is it really free?', a: "Yes, free to get started — no credit card required. It runs entirely as a web app, so there's nothing to buy from an app store either." },
   { q: 'Can I really search for any song, in any language?', a: "Yes. If it's not already in the library, the AI builds a full chord/rhythm lesson for it on the spot — Intro, Verse, Chorus, each with its own progression and strumming pattern." },
   { q: "Does the app play the actual song's audio?", a: "It can't stream copyrighted recordings itself, but you can attach a YouTube link to any song and it plays right alongside the chord/strum guide with one click." },
   { q: 'How accurate is the AI-generated chord data?', a: "Very well-known songs tend to be accurate; the app is upfront about it either way — every AI-generated song is labeled with a confidence level, so you know when to double-check by ear." },
-  { q: 'Do I need to download anything?', a: "No — it works in any browser. If you want an app-like icon on your phone, you can install it to your home screen in one tap; that's optional, not required." },
   { q: "What if I get stuck on something?", a: 'The AI tutor is available from any screen — ask it anything, like "why does my C chord sound muted?" or "give me a 15-minute practice session," and it answers using your actual progress.' },
 ];
 
@@ -200,14 +198,15 @@ export function render(root, onGetStarted) {
 function faqItem(question, answer) {
   const item = h('div', { class: 'landing-faq-item' });
   const answerEl = h('div', { class: 'landing-faq-item__answer' }, [h('p', {}, answer)]);
-  const chevron = h('span', { class: 'landing-faq-item__chevron' }, '⌄');
+  const toggleIcon = h('span', { class: 'landing-faq-item__chevron' }, '+');
   const btn = h('button', { class: 'landing-faq-item__q', type: 'button' }, [
     h('span', {}, question),
-    chevron,
+    toggleIcon,
   ]);
   btn.onclick = () => {
     const open = item.classList.toggle('open');
     answerEl.style.maxHeight = open ? answerEl.scrollHeight + 'px' : '0px';
+    toggleIcon.textContent = open ? '−' : '+';
   };
   item.appendChild(btn);
   item.appendChild(answerEl);
