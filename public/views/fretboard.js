@@ -120,11 +120,11 @@ function render(main) {
     let svg = `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}">`;
     for (let f = 0; f <= FRETS; f++) {
       const x = labelW + f * cellW;
-      svg += `<line x1="${x}" y1="10" x2="${x}" y2="${height - 10}" stroke="#2a323d"/>`;
+      svg += `<line x1="${x}" y1="10" x2="${x}" y2="${height - 10}" stroke="var(--border)"/>`;
     }
     for (let s = 0; s < 6; s++) {
       const y = 10 + s * cellH + cellH / 2;
-      svg += `<text x="10" y="${y + 4}" font-size="11" fill="#9aa5b1">${['E','A','D','G','B','E'][s]}</text>`;
+      svg += `<text x="10" y="${y + 4}" font-size="11" fill="var(--text-dim)">${['E','A','D','G','B','E'][s]}</text>`;
     }
     boardWrap.innerHTML = svg + '</svg>';
     const svgEl = boardWrap.querySelector('svg');
@@ -142,14 +142,14 @@ function render(main) {
         g.style.cursor = 'pointer';
         const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
         circle.setAttribute('cx', x); circle.setAttribute('cy', y); circle.setAttribute('r', 14);
-        circle.setAttribute('fill', isQuizTarget ? '#4fb0a5' : isHighlighted ? '#e8a33d' : 'transparent');
-        circle.setAttribute('stroke', '#3a4553');
+        circle.setAttribute('fill', isQuizTarget ? 'var(--accent-2-strong)' : isHighlighted ? 'var(--accent-strong)' : 'transparent');
+        circle.setAttribute('stroke', 'var(--border)');
         g.appendChild(circle);
         if (view.mode !== 'quiz' || isQuizTarget === false) {
           const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
           text.setAttribute('x', x); text.setAttribute('y', y + 4);
           text.setAttribute('font-size', '10'); text.setAttribute('text-anchor', 'middle');
-          text.setAttribute('fill', isHighlighted ? '#1a1305' : '#eef1f5');
+          text.setAttribute('fill', isHighlighted ? 'var(--bg)' : 'var(--text)');
           text.textContent = (view.mode === 'notes' || isHighlighted) ? note : '';
           g.appendChild(text);
         }
