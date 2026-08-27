@@ -128,43 +128,115 @@ function renderMetronomeTool(body) {
 function renderTunerTool(body) {
   const card = h('div', { class: 'card' });
   card.appendChild(h('h3', {}, 'Tuner'));
-  card.appendChild(h('p', { class: 'muted' }, "Uses your microphone — audio never leaves your device. Pluck one string at a time."));
+  card.appendChild(h('p', { class: 'muted' }, 'Uses your microphone — audio never leaves your device. Pluck one string at a time and let it ring; the needle settles once it locks onto a clear pitch.'));
 
   const tuningSel = h('select', {});
   Object.entries(TUNINGS).forEach(([key, t]) => tuningSel.appendChild(h('option', { value: key }, t.label)));
   card.appendChild(h('label', {}, 'Tuning'));
   card.appendChild(tuningSel);
 
-  const readout = h('div', { style: 'text-align:center;margin-top:20px;' });
-  const noteBig = h('div', { style: 'font-size:48px;font-weight:800;' }, '—');
-  const centsText = h('div', { class: 'muted' }, 'Play a string');
-  const meter = h('div', { style: 'height:10px;background:var(--bg-elev-2);border-radius:6px;margin-top:10px;position:relative;' });
-  const needle = h('div', { style: 'position:absolute;top:-4px;left:50%;width:4px;height:18px;background:var(--accent);border-radius:2px;transform:translateX(-50%);' });
-  meter.appendChild(needle);
+  // Six string-select buttons — shows which string you're on at a glance,
+  // and lets you tap one to see its target note before you even play it.
+  const stringRow = h('div', { class: 'row wrap', style: 'margin-top:14px;justify-content:center;gap:8px;' });
+  card.appendChild(stringRow);
+
+  function drawStrings(activeIdx) {
+    stringRow.innerHTML = '';
+    TUNINGS[tuningSel.value].strings.forEach((s, i) => {
+      stringRow.appendChild(h('div', {
+        style: `width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;
+          background:${i === activeIdx ? 'var(--accent)' : 'var(--bg-elev-2)'};
+          color:${i === activeIdx ? '#241503' : 'var(--text-dim)'};
+          border:1px solid ${i === activeIdx ? 'transparent' : 'var(--border)'};
+          transition:all 0.15s ease;`,
+      }, s.name.replace(/\d/, '')));
+    });
+  }
+  drawStrings(-1);
+  tuningSel.onchange = () => drawStrings(-1);
+
+  // Gauge: horizontal track from -50 to +50 cents, with a green "in tune"
+  // center zone and tick marks, so the reading is legible at a glance.
+  const readout = h('div', { style: 'text-align:center;margin-top:22px;' });
+  const noteBig = h('div', { style: 'font-size:56px;font-weight:800;font-family:var(--font-display);transition:color 0.15s ease;', class: '' }, '—');
+  const statusText = h('div', { class: 'muted', style: 'font-size:14px;font-weight:600;min-height:20px;margin-top:2px;' }, 'Pluck a string to begin');
+
+  const gaugeWrap = h('div', { style: 'position:relative;max-width:340px;margin:18px auto 4px;height:54px;' });
+  const track = h('div', { style: 'position:absolute;top:22px;left:0;right:0;height:8px;background:var(--bg-elev-3);border-radius:5px;overflow:hidden;' });
+  const inTuneZone = h('div', { style: 'position:absolute;left:46%;width:8%;top:0;bottom:0;background:rgba(79,192,127,0.35);' });
+  track.appendChild(inTuneZone);
+  const needle = h('div', { style: 'position:absolute;top:10px;left:50%;width:3px;height:34px;background:var(--text-dim);border-radius:2px;transform:translateX(-50%);transition:left 0.08s ease-out, background 0.15s ease;' });
+  const ticks = h('div', { style: 'position:absolute;top:32px;left:0;right:0;display:flex;justify-content:space-between;font-size:10px;color:var(--text-dim);' });
+  ['♭ -50', '-25', '0', '+25', '+50 ♯'].forEach((t) => ticks.appendChild(h('span', {}, t)));
+  gaugeWrap.appendChild(track);
+  gaugeWrap.appendChild(needle);
+  gaugeWrap.appendChild(ticks);
+
   readout.appendChild(noteBig);
-  readout.appendChild(centsText);
-  readout.appendChild(meter);
+  readout.appendChild(statusText);
+  readout.appendChild(gaugeWrap);
   card.appendChild(readout);
 
   let tuner = null;
-  const btn = h('button', { class: 'primary', style: 'margin-top:14px;' }, '🎤 Start tuner');
+  let smoothedCents = 0;
+  let silenceTimer = null;
+  const btn = h('button', { class: 'primary', style: 'margin-top:10px;' }, '🎤 Start tuner');
+
+  function setIdle() {
+    noteBig.textContent = '—';
+    noteBig.style.color = 'var(--text-dim)';
+    statusText.textContent = tuner ? '🎧 Listening — pluck a string' : 'Pluck a string to begin';
+    needle.style.left = '50%';
+    needle.style.background = 'var(--text-dim)';
+    drawStrings(-1);
+  }
+
   btn.onclick = async () => {
-    if (tuner) { tuner.stop(); tuner = null; btn.textContent = '🎤 Start tuner'; noteBig.textContent = '—'; return; }
+    if (tuner) {
+      tuner.stop(); tuner = null;
+      clearTimeout(silenceTimer);
+      btn.textContent = '🎤 Start tuner';
+      setIdle();
+      return;
+    }
     try {
       tuner = new Tuner((freq) => {
-        if (!freq) { centsText.textContent = 'Listening…'; return; }
+        clearTimeout(silenceTimer);
+        if (!freq) {
+          // Brief gap is normal (string decaying); only go idle after real silence.
+          silenceTimer = setTimeout(setIdle, 900);
+          return;
+        }
         const { string, cents } = closestString(freq, tuningSel.value);
+        // Exponential smoothing so the needle settles instead of jittering
+        // frame-to-frame from natural pitch-detection noise.
+        smoothedCents = smoothedCents * 0.7 + cents * 0.3;
+
+        const idx = TUNINGS[tuningSel.value].strings.indexOf(string);
+        drawStrings(idx);
+
         noteBig.textContent = string.name.replace(/\d/, '');
-        const inTune = Math.abs(cents) < 5;
-        noteBig.style.color = inTune ? 'var(--good)' : Math.abs(cents) < 15 ? 'var(--accent)' : 'var(--danger)';
-        centsText.textContent = `${cents > 0 ? '+' : ''}${cents.toFixed(0)} cents ${inTune ? '— in tune!' : cents > 0 ? '(flatten it)' : '(tighten it)'}`;
-        const pct = Math.max(-50, Math.min(50, cents));
+        const abs = Math.abs(smoothedCents);
+        const inTune = abs < 5;
+        const close = abs < 15;
+        const color = inTune ? 'var(--good)' : close ? 'var(--accent)' : 'var(--danger)';
+        noteBig.style.color = color;
+        needle.style.background = color;
+
+        statusText.textContent = inTune
+          ? '🎯 Perfectly in tune!'
+          : smoothedCents > 0
+            ? `Slightly sharp — loosen the string ↓ (${smoothedCents.toFixed(0)}¢)`
+            : `Slightly flat — tighten the string ↑ (${smoothedCents.toFixed(0)}¢)`;
+
+        const pct = Math.max(-50, Math.min(50, smoothedCents));
         needle.style.left = `${50 + pct}%`;
       });
       await tuner.start();
       btn.textContent = '⏹ Stop tuner';
+      statusText.textContent = '🎧 Listening — pluck a string';
     } catch (e) {
-      centsText.textContent = 'Microphone access denied or unavailable.';
+      statusText.textContent = 'Microphone access denied or unavailable.';
     }
   };
   card.appendChild(btn);
